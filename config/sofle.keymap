@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "zmk-helpers/helper.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include "zmk-helpers/helper.h"
-#include <dt-bindings/zmk/pointing.h>
 
 // Encoders
 
@@ -46,19 +45,10 @@
     combos {
         compatible = "zmk,combos";
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <32 31>;
-        };
-
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <27 33>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <25 41>;
+            key-positions = <15 16>;
+            layers = <0>;
         };
     };
 
@@ -135,7 +125,7 @@
 &trans  &trans          &trans        &trans      &trans       &trans                    &trans     &trans    &trans    &trans     &trans   &trans
 &trans  &kp HOME        &kp UP_ARROW  &kp END     &kp PG_UP    &trans                    &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT   &kp PG_DN    &trans                    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&tog 2  &kp K_UNDO      &kp K_CUT     &kp K_COPY  &kp K_PASTE  &trans  &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
+&trans  &kp K_UNDO      &kp K_CUT     &kp K_COPY  &kp K_PASTE  &trans  &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
                         &trans        &trans      &trans       &trans  &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
