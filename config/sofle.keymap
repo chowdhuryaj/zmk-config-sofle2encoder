@@ -65,7 +65,7 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <28 29>;
+            key-positions = <25 26 27>;
         };
 
         fv {
@@ -106,11 +106,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&sk LS(LC(LALT))  &kp N1  &kp N2  &kp N3            &kp N4                  &kp N5                                                 &kp N6       &kp N7           &kp N8     &kp N9    &kp N0              &mt MINUS EQUAL
-&gresc            &kp Q   &kp W   &kp E             &kp R                   &kp T                                                  &kp Y        &kp U            &kp I      &kp O     &kp P               &mt SQT DQT
-&kp TAB           &kp A   &kp S   &kp D             &kp F                   &kp G                                                  &kp H        &kp J            &kp K      &kp L     &mt SEMI COLON      &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
-&tog 2            &kp Z   &kp X   &kp C             &kp V                   &kp B            &kp C_MUTE          &kp C_PLAY_PAUSE  &kp N        &kp M            &kp COMMA  &kp DOT   &mt SLASH QUESTION  &mt RIGHT_BRACKET LEFT_BRACKET
-                          &tog 1  &mt LCTRL DELETE  &mt LEFT_ALT BACKSPACE  &mt LSHFT SPACE  &mt LEFT_GUI RET    &lt 1 RET         &lt 2 SPACE  &lt 3 BACKSPACE  &mkp MB4   &mkp MB5
+&sk LS(LC(LALT))  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5                                                 &kp N6     &kp N7         &kp N8     &kp N9    &kp N0              &mt MINUS EQUAL
+&gresc            &kp Q   &kp W   &kp E   &kp R         &kp T                                                  &kp Y      &kp U          &kp I      &kp O     &kp P               &mt SQT DQT
+&mt LCTRL TAB     &kp A   &kp S   &kp D   &kp F         &kp G                                                  &kp H      &kp J          &kp K      &kp L     &mt SEMI COLON      &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
+&kp LG(L)         &kp Z   &kp X   &kp C   &kp V         &kp B            &kp C_MUTE          &kp C_PLAY_PAUSE  &kp N      &kp M          &kp COMMA  &kp DOT   &mt SLASH QUESTION  &mt RIGHT_BRACKET LEFT_BRACKET
+                          &tog 1  &tog 2  &kp LEFT_ALT  &mt LSHFT SPACE  &mt LEFT_GUI RET    &kp ENTER         &kp SPACE  &kp BACKSPACE  &mkp MB4   &mkp MB5
             >;
 
             sensor-bindings =
