@@ -74,8 +74,8 @@
 
             bindings = <
 &sl 3          &kp N1  &kp N2          &kp N3            &kp N4                  &kp N5                                                 &kp N6  &kp N7     &kp N8     &kp N9    &kp N0              &mt MINUS EQUAL
-&tog 1         &kp Q   &kp W           &kp E             &kp R                   &kp T                                                  &kp Y   &kp U      &kp I      &kp O     &kp P               &mt SQT DQT
-&tog 2         &kp A   &kp S           &kp D             &kp F                   &kp G                                                  &kp H   &kp J      &kp K      &kp L     &mt SEMI COLON      &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
+&kp ESCAPE     &kp Q   &kp W           &kp E             &kp R                   &kp T                                                  &kp Y   &kp U      &kp I      &kp O     &kp P               &mt SQT DQT
+&kp TAB        &kp A   &kp S           &kp D             &kp F                   &kp G                                                  &kp H   &kp J      &kp K      &kp L     &mt SEMI COLON      &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
 &kp LG(SPACE)  &kp Z   &kp X           &kp C             &kp V                   &kp B            &kp C_MUTE          &kp C_PLAY_PAUSE  &kp N   &kp M      &kp COMMA  &kp DOT   &mt SLASH QUESTION  &mt RIGHT_BRACKET LEFT_BRACKET
                        &mt TAB ESCAPE  &mt LCTRL DELETE  &mt LEFT_ALT BACKSPACE  &mt LSHFT SPACE  &mt LEFT_GUI RET    &tog 2            &tog 1  &kp SPACE  &mkp MB4   &mkp MB5
             >;
