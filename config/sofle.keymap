@@ -40,15 +40,7 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos {
-        compatible = "zmk,combos";
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 16>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         caps: caps {
