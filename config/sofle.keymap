@@ -13,13 +13,6 @@
  *       from the *other hand*
  *
  * - Updated ONLY the home row section in default_layer to use &hml / &hmr.
- *
- * Everything else is left as close to your current file as possible:
- * - num, nav, sys layers untouched
- * - combos untouched
- * - encoders untouched
- * - toggles (&tog 1 / &tog 2) untouched for now
- *
  * You can flash this using Keymap Editor.
  */
 
