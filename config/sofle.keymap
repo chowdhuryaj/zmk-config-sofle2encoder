@@ -100,11 +100,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp F1  &kp F2    &kp F3        &kp F4        &kp F5        &kp F6                        &kp F7          &kp F8         &kp F9          &kp F10               &kp F11               &kp F12
-&trans  &kp N1    &kp N7        &kp N8        &kp N9        &kp N5                        &kp CARET       &kp AMPERSAND  &kp ASTRK       &kp LEFT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans  &kp EXCL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PRCNT                     &kp MINUS       &kp EQUAL      &kp KP_DIVIDE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET     &kp PIPE
-&trans  &kp N0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT  &trans    &trans  &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp PIPE              &trans
-                  &trans        &trans        &trans        &trans      &trans    &trans  &trans          &trans         &trans          &trans
+&kp F1  &kp F2     &kp F3        &kp F4        &kp F5        &kp F6                        &kp F7          &kp F8         &kp F9          &kp F10               &kp F11               &kp F12
+&trans  &kp SLASH  &kp N7        &kp N8        &kp N9        &kp EQUAL                     &kp CARET       &kp AMPERSAND  &kp ASTRK       &kp LEFT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans  &kp ASTRK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS                     &kp MINUS       &kp EQUAL      &kp KP_DIVIDE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET     &kp PIPE
+&trans  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT  &trans    &trans  &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp PIPE              &trans
+                   &trans        &trans        &trans        &trans      &trans    &trans  &trans          &trans         &trans          &trans
             >;
 
             sensor-bindings =
