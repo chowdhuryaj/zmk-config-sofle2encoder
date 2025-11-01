@@ -40,7 +40,39 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        enter {
+            bindings = <&kp RET>;
+            key-positions = <27 28>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <25 26>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <26 27>;
+        };
+
+        del {
+            bindings = <&kp DEL>;
+            key-positions = <26 27 28>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <28 29>;
+        };
+
+        fv {
+            bindings = <&fhv>;
+            key-positions = <26 27 28 25 54>;
+        };
+    };
 
     behaviors {
         caps: caps {
@@ -101,8 +133,8 @@
 &kp F1     &kp F2     &kp F3        &kp F4        &kp F5        &kp F6                       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11               &kp F12
 &kp GRAVE  &kp SLASH  &kp N7        &kp N8        &kp N9        &kp EQUAL                    &kp PG_UP  &kp PG_DN  &mkp MB4   &mkp MB5  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kt LSHFT  &kp ASTRK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS                    &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP    &kp LBKT              &kp RBKT
-&tog 1     &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt DOT    &trans    &trans  &kp ESC    &kp HOME   &kp END    &kp TAB   &kp LS(LBRC)          &kp LS(RBRC)
-                      &trans        &trans        &trans        &trans     &trans    &trans  &trans     &trans     &trans     &trans
+&trans     &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt DOT    &trans    &trans  &kp ESC    &kp HOME   &kp END    &kp TAB   &kp LS(LBRC)          &kp LS(RBRC)
+                      &tog 1        &trans        &trans        &trans     &trans    &trans  &trans     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
@@ -126,9 +158,7 @@
                     &trans     &trans     &trans     &trans     &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &mkp MB4         &mkp MB5
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>,
-                <&inc_dec_kp LG(Z) LS(LG(Z))>;
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         sys {
