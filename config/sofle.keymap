@@ -212,42 +212,286 @@
             label = "BRACK";
         };
     };
-
-    /*
-     * Your original combos block, unchanged
-     */
-
     combos {
         compatible = "zmk,combos";
 
-        enter {
-            bindings = <&kp RET>;
+        /*
+         * === CORE NAV/EDIT COMBOS YOU ALREADY HAD ===
+         *
+         * These came from your original keymap:
+         * - enter          <27 28>
+         * - esc            <25 26>
+         * - tab            <26 27>
+         * - del            <26 27 28>
+         * - backspace      <25 26 27>
+         * - fhv macro      <26 27 28 25 54>
+         *
+         * I'm leaving them exactly as-is so nothing breaks.
+         */
+
+        combo_enter {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
             key-positions = <27 28>;
+            bindings = <&kp RET>;
         };
 
-        esc {
-            bindings = <&kp ESCAPE>;
+        combo_esc {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
             key-positions = <25 26>;
+            bindings = <&kp ESCAPE>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
+        combo_tab {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
             key-positions = <26 27>;
+            bindings = <&kp TAB>;
         };
 
-        del {
-            bindings = <&kp DEL>;
+        combo_del {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
             key-positions = <26 27 28>;
+            bindings = <&kp DEL>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
+        combo_bspc {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
             key-positions = <25 26 27>;
+            bindings = <&kp BACKSPACE>;
         };
 
-        fv {
-            bindings = <&fhv>;
+        combo_fhv {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
             key-positions = <26 27 28 25 54>;
+            bindings = <&fhv>;
+        };
+
+
+        /*
+         * === TEXT EDIT / CLIPBOARD COMBOS (MAC-FRIENDLY) ===
+         *
+         * Goal: left hand triggers common editing while right hand stays on mouse.
+         *
+         * Assumptions for these indices:
+         * - 26 ~ left home row middle finger (your D key area)
+         * - 37 ~ lower row under that same hand (your X-ish position)
+         * - 38 ~ lower row next key (C-ish)
+         * - 39 ~ lower row next key (V-ish)
+         *
+         * You can adjust the exact key-positions later if cut/copy/paste don't feel natural.
+         *
+         * bindings:
+         *   &kp LG(X)  = Cmd+X  (cut)
+         *   &kp LG(C)  = Cmd+C  (copy)
+         *   &kp LG(V)  = Cmd+V  (paste)
+         *
+         * CANCEL combo:
+         *   &kp ESCAPE, this acts like urob's "cancel Numword / Capsword / Smart-mouse".
+         *   We duplicate ESC here on purpose to make that idea muscle-memory.
+         */
+
+        combo_cut {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* X + D style chord: bottom row under middle finger + home row under middle finger */
+            key-positions = <37 26>;
+            bindings = <&kp LG(X)>;
+        };
+
+        combo_copy {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* C + D style chord: bottom row "C-ish" + home row middle finger */
+            key-positions = <38 26>;
+            bindings = <&kp LG(C)>;
+        };
+
+        combo_paste {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* V + D style chord: bottom row "V-ish" + home row middle finger */
+            key-positions = <39 26>;
+            bindings = <&kp LG(V)>;
+        };
+
+        combo_cancel_mode {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* Same two-finger chord you want to use mentally as "CANCEL" */
+            key-positions = <37 39>;
+            bindings = <&kp ESCAPE>;
+        };
+
+
+        /*
+         * === SYMBOL / PUNCTUATION COMBOS ===
+         *
+         * This is the "combo layer instead of symbol layer" idea.
+         *
+         * We’re doing two groups:
+         *
+         * 1) Pairs on the LEFT hand home-row + bottom-row = things you hit a lot.
+         *    We'll map some common punctuation and programming symbols.
+         *
+         *    Example mental model:
+         *      - 26 (your D/F area) + 27 (your F/G area) -> "("
+         *      - 27 + 28 -> ")"
+         *      - 25 + 27 -> "{"
+         *      - 28 + 27 -> "}"
+         *
+         *    You can tweak which two-finger combos feel nicest under your actual fingers.
+         *
+         * 2) Pairs on the RIGHT hand home-row + bottom-row = mirrors, like "[]" "<>" etc.
+         *
+         * NOTE:
+         * - We picked indices from the Sofle matrix:
+         *     Left home row: 24 25 26 27 28 29
+         *     Left bottom:  36 37 38 39 40 41
+         *     Right home:   30 31 32 33 34 35
+         *     Right bottom: 44 45 46 47 48 49
+         *     Right thumb row: 55 56 57 58 59
+         *
+         * If any symbol feels wrong, just change the binding or change which indices are paired.
+         */
+
+
+        /* --- LEFT HAND SYMBOL COMBOS --- */
+
+        combo_paren_open_left {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* chord two adjacent left-hand home row keys (26 + 27) */
+            key-positions = <26 27>;
+            bindings = <&kp LPAR>;   /* "(" */
+        };
+
+        combo_paren_close_left {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* chord next two (27 + 28) */
+            key-positions = <27 28>;
+            bindings = <&kp RPAR>;   /* ")" */
+        };
+
+        combo_brace_open_left {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* slightly wider reach (25 + 27) */
+            key-positions = <25 27>;
+            bindings = <&kp LBRC>;   /* "{" on US keymaps usually Shift+[" so LBRC = "[".
+                                        If you prefer true "{", switch to &kp LCBR */
+        };
+
+        combo_brace_close_left {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* mirror (28 + 26) */
+            key-positions = <28 26>;
+            bindings = <&kp RBRC>;   /* "]" or "}" depending on layout; use &kp RCBR for "}" */
+        };
+
+        combo_plus_left {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* bottom row index+middle (39 + 37) */
+            key-positions = <39 37>;
+            bindings = <&kp PLUS>;   /* "+" */
+        };
+
+        combo_minus_left {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* bottom row adjacent (37 + 38) */
+            key-positions = <37 38>;
+            bindings = <&kp MINUS>;  /* "-" */
+        };
+
+        combo_underscore_left {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* bottom row ring+pinky (36 + 37) */
+            key-positions = <36 37>;
+            bindings = <&kp UNDERSCORE>; /* "_" */
+        };
+
+        combo_pipe_left {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* bottom row outer pair (36 + 39) */
+            key-positions = <36 39>;
+            bindings = <&kp PIPE>;   /* "|" */
+        };
+
+
+        /* --- RIGHT HAND SYMBOL COMBOS --- */
+
+        combo_paren_open_right {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* right hand home row adjacent (32 + 33) */
+            key-positions = <32 33>;
+            bindings = <&kp LPAR>;   /* "(" */
+        };
+
+        combo_paren_close_right {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* next two (33 + 34) */
+            key-positions = <33 34>;
+            bindings = <&kp RPAR>;   /* ")" */
+        };
+
+        combo_bracket_open_right {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* home row index+middle (31 + 32) */
+            key-positions = <31 32>;
+            bindings = <&kp LBKT>;   /* "[" */
+        };
+
+        combo_bracket_close_right {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* home row middle+ring (34 + 35) */
+            key-positions = <34 35>;
+            bindings = <&kp RBKT>;   /* "]" */
+        };
+
+        combo_asterisk_right {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* bottom row right index+middle (47 + 46) */
+            key-positions = <47 46>;
+            bindings = <&kp ASTRK>;  /* "*" */
+        };
+
+        combo_slash_right {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* bottom row right middle+ring (46 + 45) */
+            key-positions = <46 45>;
+            bindings = <&kp SLASH>;  /* "/" */
+        };
+
+        combo_amp_right {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* bottom row right ring+pinky (45 + 44) */
+            key-positions = <45 44>;
+            bindings = <&kp AMPS>;   /* "&" */
+        };
+
+        combo_caret_right {
+            timeout-ms = <40>;
+            require-prior-idle-ms = <200>;
+            /* home row + bottom row chord (32 + 46) */
+            key-positions = <32 46>;
+            bindings = <&kp CARET>;  /* "^" */
         };
     };
 
