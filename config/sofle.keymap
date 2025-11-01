@@ -32,7 +32,7 @@
     flavor = "balanced";
     quick-tap-ms = <175>;
     require-prior-idle-ms = <150>;
-    hold-while-undecided;
+    tapping-term-ms = <250>;
 };
 
 / {
