@@ -123,7 +123,7 @@
 &trans  &trans          &trans        &trans     &trans     &trans                       &tog 0          &tog 1          &tog 2           &tog 3           &trans  &trans
 &trans  &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP  &trans                       &trans          &trans          &trans           &trans           &trans  &trans
 &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PG_DN  &trans                       &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_LEFT   &trans  &trans
-&tog 0  &kp LC(Z)       &kp LG(X)     &kp LG(C)  &kp LG(V)  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans  &trans
+&tog 0  &kp LG(Z)       &kp LG(X)     &kp LG(C)  &kp LG(V)  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans  &trans
                         &trans        &trans     &trans     &trans  &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &mkp MB4         &mkp MB5
             >;
 
