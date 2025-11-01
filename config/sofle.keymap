@@ -100,7 +100,7 @@
 &kp F1  &kp F2     &kp F3        &kp F4        &kp F5        &kp F6                        &kp F7          &kp F8         &kp F9          &kp F10               &kp F11               &kp F12
 &trans  &kp SLASH  &kp N7        &kp N8        &kp N9        &kp EQUAL                     &kp CARET       &kp AMPERSAND  &kp ASTRK       &kp LEFT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &trans  &kp ASTRK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS                     &kp MINUS       &kp EQUAL      &kp KP_DIVIDE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET     &kp PIPE
-&trans  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT  &trans    &trans  &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp PIPE              &trans
+&tog 0  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT  &trans    &trans  &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp PIPE              &trans
                    &trans        &trans        &trans        &trans      &trans    &trans  &trans          &trans         &trans          &trans
             >;
 
@@ -123,7 +123,7 @@
 &trans  &trans          &trans        &trans     &trans     &trans                       &tog 0          &tog 1          &tog 2           &tog 3           &trans  &trans
 &trans  &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP  &trans                       &trans          &trans          &trans           &trans           &trans  &trans
 &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PG_DN  &trans                       &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_LEFT   &trans  &trans
-&trans  &kp LC(Z)       &kp LG(X)     &kp LG(C)  &kp LG(V)  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans  &trans
+&tog 0  &kp LC(Z)       &kp LG(X)     &kp LG(C)  &kp LG(V)  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans  &trans
                         &trans        &trans     &trans     &trans  &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &mkp MB4         &mkp MB5
             >;
 
@@ -145,7 +145,7 @@
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &trans  &trans  &trans
 &trans          &trans        &trans        &trans        &trans        &studio_unlock                    &trans        &trans        &trans        &trans  &trans  &trans
 &trans          &trans        &trans        &trans        &trans        &trans                            &trans        &trans        &trans        &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans        &trans          &trans    &trans  &trans        &trans        &trans        &trans  &trans  &trans
+&tog 0          &trans        &trans        &trans        &trans        &trans          &trans    &trans  &trans        &trans        &trans        &trans  &trans  &trans
                               &trans        &trans        &trans        &trans          &trans    &trans  &trans        &trans        &trans        &trans
             >;
 
