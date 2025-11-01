@@ -4,13 +4,20 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+
   projects:
+    # Core ZMK firmware (you likely already have this)
     - name: zmk
       remote: zmkfirmware
       revision: main
-      import: app/west.yml
+      import: app/west
+
+    # urob's helper macros (key labels, nice behavior wrappers)
     - name: zmk-helpers
       remote: urob
       revision: main
-  self:
-    path: config
+
+    # auto-layer behavior so number/mouse layers collapse automatically
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
