@@ -1,8 +1,26 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
- * SPDX-License-Identifier: MIT
+ * Sofle keymap
+ * Based on your original repo, modified to add timerless-ish mirrored home row mods
+ * without using urob's helper macros so Keymap Editor can parse it.
  *
- * Edited for Sofle + urob-style timeless HRM on QWERTY.
+ * Changes from your original:
+ * - Added two custom hold-tap behaviors (hml, hmr) that behave like urob's "timeless HRM":
+ *     Left hand A/S/D/F become GUI/ALT/CTRL/SHIFT when held
+ *     Right hand J/K/L/; become SHIFT/CTRL/ALT/GUI when held
+ *   These are tuned to:
+ *     - long tapping-term so normal typing doesn't accidentally hold
+ *     - trigger the "hold" side (the modifier) when you chord something
+ *       from the *other hand*
+ *
+ * - Updated ONLY the home row section in default_layer to use &hml / &hmr.
+ *
+ * Everything else is left as close to your current file as possible:
+ * - num, nav, sys layers untouched
+ * - combos untouched
+ * - encoders untouched
+ * - toggles (&tog 1 / &tog 2) untouched for now
+ *
+ * You can flash this using Keymap Editor.
  */
 
 #include <behaviors.dtsi>
@@ -11,20 +29,11 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-/* urob helpers (you pulled these in via west.yml) */
-#include "zmk-helpers/helper.h"
+/* Pointer tuning from your file */
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
-/* Sofle key label map (you created this at
- * config/include/zmk-helpers/key-labels/sofle.h)
- * It defines LN0..LH4, RN0..RH4, LEC, REC, KEYS_L, KEYS_R, etc.
- */
-#include "zmk-helpers/key-labels/sofle.h"
-
-/* Pointer speed tuning */
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20   // default: 10
-
-/* Encoder config (kept from your original) */
+/* Encoder tuning from your file */
 &sensors {
     triggers-per-rotation = <30>;
 };
@@ -37,10 +46,7 @@
     steps = <60>;
 };
 
-/*
- * Global mod-tap timing tweaks you already had.
- * This adjusts the built-in &mt behavior so it's more forgiving.
- */
+/* Your original global &mt tweaks */
 &mt {
     flavor = "balanced";
     quick-tap-ms = <175>;
@@ -50,106 +56,121 @@
 
 /*
  * -----------------------------------------------------------------------------
- * Timerless / "timeless" Home Row Mods
+ * Timerless-style Home Row Mods (plain devicetree version)
  * -----------------------------------------------------------------------------
  *
- * We define two new hold-tap behaviors using urob's helper macro ZMK_HOLD_TAP:
- *  - hml = left-hand HRM behavior (triggers hold when you chord with RIGHT hand)
- *  - hmr = right-hand HRM behavior (triggers hold when you chord with LEFT hand)
+ * We define two explicit behaviors:
+ *   hml = left-hand home row mod
+ *   hmr = right-hand home row mod
  *
- * Result:
- *  - You can set a long tapping-term without accidental mods in normal typing.
- *  - Holding A/S/D/F gives you GUI/ALT/CTRL/SHIFT.
- *  - Holding J/K/L/; gives you SHIFT/CTRL/ALT/GUI (mirrored).
+ * Both are zmk,behavior-hold-tap with:
+ *  - flavor = "balanced"
+ *  - long tapping-term (500ms)
+ *  - require-prior-idle-ms (200ms)
+ *  - hold-trigger-on-release
+ *  - hold-trigger-key-positions = <...>
  *
- * NOTE: KEYS_L and KEYS_R come from sofle.h. They include all normal keys
- * on that half of the board (excluding encoder press), so the "other hand"
- * detection works correctly for Sofle with 2 encoders.
+ * The big trick:
+ *    For LEFT-hand keys (A/S/D/F),
+ *      we want them to become modifiers ONLY when you chord with the RIGHT hand.
+ *    For RIGHT-hand keys (J/K/L/;),
+ *      we want them to become modifiers ONLY when you chord with the LEFT hand.
+ *
+ * We hardcode those position lists right here based on Sofle matrix indices.
+ *
+ * NOTE:
+ * These position lists intentionally do NOT include the encoder press switches,
+ * so clicking your knobs won't accidentally force a hold.
  */
 
-ZMK_HOLD_TAP(hml,
-    flavor = "balanced";
-    tapping-term-ms = <500>;
-    quick-tap-ms = <175>;
-    require-prior-idle-ms = <200>;
-    hold-trigger-key-positions = <KEYS_R>;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-);
-
-ZMK_HOLD_TAP(hmr,
-    flavor = "balanced";
-    tapping-term-ms = <500>;
-    quick-tap-ms = <175>;
-    require-prior-idle-ms = <200>;
-    hold-trigger-key-positions = <KEYS_L>;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-);
-
-/*
- * Layer indices in your repo:
- * 0 = default_layer
- * 1 = num
- * 2 = nav
- * 3 = sys
- *
- * Leaving these "#define"s out because you weren't actually using BASE/LOWER/etc.
- */
-
-/ {
-    /*
-     * Conditional layers node: keep as-is.
-     * This lets you activate ADJUST/SYS style layers conditionally.
-     */
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-    };
-
-    /*
-     * Combos from your original file.
-     * I didn't change any key-positions or bindings here.
-     */
-    combos {
-        compatible = "zmk,combos";
-
-        enter {
-            bindings = <&kp RET>;
-            key-positions = <27 28>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <25 26>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <26 27>;
-        };
-
-        del {
-            bindings = <&kp DEL>;
-            key-positions = <26 27 28>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <25 26 27>;
-        };
-
-        fv {
-            bindings = <&fhv>;
-            key-positions = <26 27 28 25 54>;
-        };
-    };
-
-    /*
-     * Behaviors block from your file.
-     * We keep your caps word behavior and name it "caps".
-     * (We are not wiring magic thumb or punctuation morphs yet to keep this buildable.)
-     */
+ / {
     behaviors {
+        /*
+         * Left-hand home row mod behavior
+         * - Tap sends the normal key
+         * - Hold sends the modifier
+         * - It only "commits" to the hold (modifier)
+         *   if you press/release something from the RIGHT hand.
+         */
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_TIMERLESS";
+            #binding-cells = <2>;
+
+            flavor = "balanced";
+            tapping-term-ms = <500>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <200>;
+            hold-trigger-on-release;
+
+            /*
+             * Positions considered "other hand" for LEFT hand keys
+             * = all RIGHT-hand alphas/thumbs/etc. on Sofle.
+             *
+             * Right side matrix indices:
+             * RN0 6 RN1 7 RN2 8 RN3 9 RN4 10 RN5 11
+             * RT0 18 RT1 19 RT2 20 RT3 21 RT4 22 RT5 23
+             * RM0 30 RM1 31 RM2 32 RM3 33 RM4 34 RM5 35
+             * RB0 44 RB1 45 RB2 46 RB3 47 RB4 48 RB5 49
+             * RH0 55 RH1 56 RH2 57 RH3 58 RH4 59
+             */
+            hold-trigger-key-positions = <
+                6 7 8 9 10 11
+                18 19 20 21 22 23
+                30 31 32 33 34 35
+                44 45 46 47 48 49
+                55 56 57 58 59
+            >;
+
+            /* First binding is the "hold" behavior (modifier),
+             * Second binding is the "tap" behavior (normal key).
+             * We'll supply those per-key in the layer as &hml MOD KEY
+             */
+            bindings = <&kp>, <&kp>;
+        };
+
+        /*
+         * Right-hand home row mod behavior
+         * Same idea, but flipped:
+         * It only turns into a "hold" mod if you chord with LEFT-hand keys.
+         */
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_TIMERLESS";
+            #binding-cells = <2>;
+
+            flavor = "balanced";
+            tapping-term-ms = <500>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <200>;
+            hold-trigger-on-release;
+
+            /*
+             * Positions considered "other hand" for RIGHT hand keys
+             * = all LEFT-hand alphas/thumbs/etc. on Sofle.
+             *
+             * Left side matrix indices:
+             * LN5 0 LN4 1 LN3 2 LN2 3 LN1 4 LN0 5
+             * LT5 12 LT4 13 LT3 14 LT2 15 LT1 16 LT0 17
+             * LM5 24 LM4 25 LM3 26 LM2 27 LM1 28 LM0 29
+             * LB5 36 LB4 37 LB3 38 LB2 39 LB1 40 LB0 41
+             * LH4 50 LH3 51 LH2 52 LH1 53 LH0 54
+             */
+            hold-trigger-key-positions = <
+                0 1 2 3 4 5
+                12 13 14 15 16 17
+                24 25 26 27 28 29
+                36 37 38 39 40 41
+                50 51 52 53 54
+            >;
+
+            bindings = <&kp>, <&kp>;
+        };
+
+        /*
+         * You already had a caps word behavior called "caps".
+         * Keeping it exactly.
+         */
         caps: caps {
             compatible = "zmk,behavior-caps-word";
             label = "CAPS";
@@ -159,8 +180,14 @@ ZMK_HOLD_TAP(hmr,
     };
 
     /*
-     * Macros block from your file.
-     * Keeping fhv exactly the same.
+     * Your original conditional_layers node
+     */
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+    };
+
+    /*
+     * Your original macros block, unchanged
      */
     macros {
         fhv: fhv {
@@ -198,104 +225,123 @@ ZMK_HOLD_TAP(hmr,
     };
 
     /*
-     * Keymap: layers
+     * Your original combos block, unchanged
+     */
+    combos {
+        compatible = "zmk,combos";
+
+        enter {
+            bindings = <&kp RET>;
+            key-positions = <27 28>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <25 26>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <26 27>;
+        };
+
+        del {
+            bindings = <&kp DEL>;
+            key-positions = <26 27 28>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <25 26 27>;
+        };
+
+        fv {
+            bindings = <&fhv>;
+            key-positions = <26 27 28 25 54>;
+        };
+    };
+
+    /*
+     * Keymap layers
      */
     keymap {
         compatible = "zmk,keymap";
 
         /*
-         * =====================================================================
-         * LAYER 0: default_layer (Base)
+         * LAYER 0: default_layer
          *
-         * I only changed the HOME ROW chunk to use hml/hmr (timerless HRM).
-         * Everything else is left exactly how you had it, including:
-         *  - encoders
-         *  - layer toggles (&tog 1 / &tog 2)
-         *  - thumb layout
-         *  - media keys
-         *  - mouse keys
+         * ONLY CHANGE in this layer:
+         *   Home row now uses &hml / &hmr to get mirrored mods.
+         *   Everything else is exactly what you had.
          *
-         * That way you still boot and function the way you do now, but with
-         * mirrored home row mods like urob.
+         * Mapping:
+         *   A = tap 'a', hold Left GUI
+         *   S = tap 's', hold Left Alt
+         *   D = tap 'd', hold Left Ctrl
+         *   F = tap 'f', hold Left Shift
          *
-         * Home row mapping after edit:
-         *   A = tap 'a', hold = LGUI
-         *   S = tap 's', hold = LALT
-         *   D = tap 'd', hold = LCTRL
-         *   F = tap 'f', hold = LSHFT
-         *   J = tap 'j', hold = RSFT
-         *   K = tap 'k', hold = RCTRL
-         *   L = tap 'l', hold = RALT
-         *   ; = tap ';', hold = RGUI
+         *   J = tap 'j', hold Right Shift
+         *   K = tap 'k', hold Right Ctrl
+         *   L = tap 'l', hold Right Alt
+         *   ; = tap ';', hold Right GUI
          *
-         * G and H stay normal letters so the mirror is centered.
-         * =====================================================================
+         * G and H remain normal so there's a "break" in the middle.
          */
 
         default_layer {
             display-name = "Base";
 
-            // Layout comment from your original file:
-            // ------------------------------------------------------------------------------------------------------------
-            // | `    | 1 | 2 | 3 | 4 | 5 |      | 6 | 7 | 8 | 9 | 0 |          |
-            // | ESC  | Q | W | E | R | T |      | Y | U | I | O | P | BKSPC    |
-            // | TAB  | A | S | D | F | G |      | H | J | K | L | ; | '        |
-            // | SHIFT| Z | X | C | V | B | MUTE |   | N | M | , | . | / | SHIFT|
-            // | GUI  | ALT | CTRL | LOWER | ENTER |   | SPACE | RAISE | CTRL ...
-            //
-            // (I'm not re-wrapping the ASCII art for thumbs here because it's cosmetic.)
-
             bindings = <
-                /* Row 1-ish / function row stuff */
+                /* Row 1 group from your file */
                 &sk LS(LC(LALT))
-                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
-                &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
+                &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
                 &mt MINUS EQUAL
 
-                /* Row 2: QWERTY top row */
+                /* Row 2 from your file (QWERTY top row) */
                 &gresc
-                &kp Q  &kp W  &kp E  &kp R  &kp T
-                &kp Y  &kp U  &kp I  &kp O  &kp P
+                &kp Q &kp W &kp E &kp R &kp T
+                &kp Y &kp U &kp I &kp O &kp P
                 &mt SQT DQT
 
-                /* Row 3: HOME ROW with mirrored timeless HRMs */
+                /* Row 3: THIS is the modified home row */
                 &mt LCTRL TAB
 
-                /* left hand: A S D F become GUI / ALT / CTRL / SHIFT when held */
+                /* left hand A/S/D/F become mods on hold */
                 &hml LGUI A
                 &hml LALT S
                 &hml LCTRL D
                 &hml LSFT F
 
-                /* G stays plain */
+                /* G stays normal */
                 &kp G
 
-                /* right hand: H stays plain */
+                /* H stays normal */
                 &kp H
 
-                /* right hand HRMs: J K L ; become SHIFT / CTRL / ALT / GUI when held */
+                /* right hand J/K/L/; become mods on hold */
                 &hmr RSFT J
                 &hmr RCTRL K
                 &hmr RALT L
                 &hmr RGUI SEMI
 
-                /* apostrophe key you had as a mod-tap pair */
+                /* you had this as &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS */
                 &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS
 
-                /* Row 4: bottom row letters / media / punctuation */
+                /* Row 4 from your file */
                 &kp LG(L)
-                &kp Z  &kp X  &kp C  &kp V  &kp B
-                &kp C_MUTE  &kp C_PLAY_PAUSE
-                &kp N  &kp M  &kp COMMA  &kp DOT
+                &kp Z &kp X &kp C &kp V &kp B
+                &kp C_MUTE &kp C_PLAY_PAUSE
+                &kp N &kp M &kp COMMA &kp DOT
                 &mt SLASH QUESTION
                 &mt RIGHT_BRACKET LEFT_BRACKET
 
-                /* Thumb cluster / layer toggles / space / enter / backspace / mouse buttons */
-                &tog 1  &tog 2  &kp LEFT_ALT
+                /* Thumbs / layer toggles from your file */
+                &tog 1 &tog 2 &kp LEFT_ALT
                 &mt LSHFT SPACE
                 &mt LEFT_GUI RET
-                &kp ENTER  &kp SPACE  &kp BACKSPACE
-                &mkp MB4   &mkp MB5
+                &kp ENTER &kp SPACE &kp BACKSPACE
+                &mkp MB4 &mkp MB5
             >;
 
             sensor-bindings = <
@@ -307,36 +353,29 @@ ZMK_HOLD_TAP(hmr,
         };
 
         /*
-         * =====================================================================
          * LAYER 1: num
-         * (untouched from your original)
-         * =====================================================================
+         * unchanged from your file
          */
         num {
             display-name = "Number";
-            // TODO (your original comment): Some binds are waiting for shifted keycode support.
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |     | F1 | F2 | F3 | F4 | F5 |      | F6 | F7 | F8 | F9 | F10 | F11 |
-            // | `   | 1  | 2  | 3  | 4  | 5  |      | 6  | 7  | 8  | 9  | 0   | F12 |
-            // ...
 
             bindings = <
-                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
-                &kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
+                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
 
-                &kp GRAVE  &kp SLASH  &kp N7  &kp N8  &kp N9  &kp EQUAL
-                &kp PG_UP  &kp PG_DN  &mkp MB4  &mkp MB5
+                &kp GRAVE &kp SLASH &kp N7 &kp N8 &kp N9 &kp EQUAL
+                &kp PG_UP &kp PG_DN &mkp MB4 &mkp MB5
                 &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
                 &kt LSHFT
-                &kp ASTRK    &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp MINUS
-                &kp DOWN     &kp LEFT    &kp RIGHT   &kp UP
-                &kp LBKT     &kp RBKT    &trans
 
-                &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt DOT  &trans  &trans
-                &kp ESC  &kp HOME  &kp END  &kp TAB
-                &kp LS(LBRC)  &kp LS(RBRC)
-                &tog 1  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &kp ASTRK &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp MINUS &kp DOWN
+                &kp LEFT &kp RIGHT &kp UP &kp LBKT &kp RBKT &trans
+
+                &kp N0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kt DOT &trans &trans
+                &kp ESC &kp HOME &kp END &kp TAB
+                &kp LS(LBRC) &kp LS(RBRC)
+
+                &tog 1 &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
 
             sensor-bindings = <
@@ -345,17 +384,11 @@ ZMK_HOLD_TAP(hmr,
         };
 
         /*
-         * =====================================================================
          * LAYER 2: nav
-         * (untouched from your original)
-         * =====================================================================
+         * unchanged from your file
          */
         nav {
             display-name = "Nav";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |   ...
-            // | ... navigation, mouse move, scroll, undo/cut/copy/paste, clicks ...
 
             bindings = <
                 &trans &trans &trans &trans &trans &trans
@@ -382,18 +415,11 @@ ZMK_HOLD_TAP(hmr,
         };
 
         /*
-         * =====================================================================
          * LAYER 3: sys
-         * (untouched from your original)
-         * =====================================================================
+         * untouched from your file
          */
         sys {
             display-name = "System";
-
-            // ----------------------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 | ...
-            // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF | ...
-            // | ... BT select, RGB, etc ...
 
             bindings = <
                 &bt BT_CLR_ALL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
