@@ -556,11 +556,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans   &trans     &trans     &trans     &trans     &trans                          &tog 0          &tog 1          &tog 2           &tog 3           &trans  &trans
-&kp ESC  &kp HOME   &kt LALT   &kp END    &kp PG_UP  &kp PG_UP                       &trans          &trans          &trans           &trans           &trans  &trans
-&kp TAB  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp PG_DN                       &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_LEFT   &trans  &trans
-&tog 2   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans     &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans  &trans
-                    &trans     &trans     &trans     &trans     &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &mkp MB4         &mkp MB5
+&trans   &trans     &trans     &trans     &trans     &trans                          &tog 0          &tog 1          &tog 2           &tog 3    &trans  &trans
+&kp ESC  &kp HOME   &kt LALT   &kp END    &kp PG_UP  &kp PG_UP                       &trans          &trans          &trans           &trans    &trans  &trans
+&kp TAB  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp PG_DN                       &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &mkp MB4  &trans  &trans
+&tog 2   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans     &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5  &trans  &trans
+                    &trans     &trans     &trans     &trans     &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &trans           &trans
             >;
 
             sensor-bindings = <
