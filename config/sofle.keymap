@@ -248,47 +248,6 @@
          *   &kp ESCAPE, this acts like urob's "cancel Numword / Capsword / Smart-mouse".
          *   We duplicate ESC here on purpose to make that idea muscle-memory.
          */
-
-        combo_cut {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* X + D style chord: bottom row under middle finger + home row under middle finger */
-
-            key-positions = <37 26>;
-            bindings = <&kp LG(X)>;
-        };
-
-        combo_copy {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* C + D style chord: bottom row "C-ish" + home row middle finger */
-
-            key-positions = <38 26>;
-            bindings = <&kp LG(C)>;
-        };
-
-        combo_paste {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* V + D style chord: bottom row "V-ish" + home row middle finger */
-
-            key-positions = <39 26>;
-            bindings = <&kp LG(V)>;
-        };
-
-        combo_cancel_mode {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* Same two-finger chord you want to use mentally as "CANCEL" */
-
-            key-positions = <37 39>;
-            bindings = <&kp ESCAPE>;
-        };
-
         /*
          * === SYMBOL / PUNCTUATION COMBOS ===
          *
@@ -327,18 +286,8 @@
 
             /* chord two adjacent left-hand home row keys (26 + 27) */
 
-            key-positions = <26 27>;
-            bindings = <&kp LPAR>;   /* "(" */
-        };
-
-        combo_paren_close_left {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* chord next two (27 + 28) */
-
-            key-positions = <27 28>;
-            bindings = <&kp RPAR>;   /* ")" */
+            key-positions = <26 27 53>;
+            bindings = <&paren>;   /* "(" */
         };
 
         combo_brace_open_left {
@@ -347,19 +296,9 @@
 
             /* slightly wider reach (25 + 27) */
 
-            key-positions = <25 27>;
-            bindings = <&kp LBRC>;   /* "{" on US keymaps usually Shift+[" so LBRC = "[".
+            key-positions = <25 27 52>;
+            bindings = <&brack>;   /* "{" on US keymaps usually Shift+[" so LBRC = "[".
                                         If you prefer true "{", switch to &kp LCBR */
-        };
-
-        combo_brace_close_left {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* mirror (28 + 26) */
-
-            key-positions = <28 26>;
-            bindings = <&kp RBRC>;   /* "]" or "}" depending on layout; use &kp RCBR for "}" */
         };
 
         combo_plus_left {
