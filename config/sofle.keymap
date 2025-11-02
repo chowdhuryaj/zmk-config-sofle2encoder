@@ -542,10 +542,6 @@
 &trans     &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt DOT    &trans    &trans  &kp ESC    &kp HOME   &kp END    &kp TAB   &kp LS(LBRC)          &kp LS(RBRC)
                       &trans        &kp N0        &trans        &trans     &trans    &trans  &trans     &trans     &trans     &trans
             >;
-
-            sensor-bindings = <
-                &inc_dec_kp LC(TAB) LC(LS(TAB))
-            >;
         };
 
         /*
@@ -556,15 +552,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans   &trans     &trans     &trans     &trans     &trans                          &tog 0          &tog 1          &tog 2           &tog 3    &trans  &trans
-&kp ESC  &kp HOME   &kt LALT   &kp END    &kp PG_UP  &kp PG_UP                       &trans          &trans          &trans           &trans    &trans  &trans
-&kp TAB  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp PG_DN                       &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &mkp MB4  &trans  &trans
-&tog 2   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans     &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5  &trans  &trans
-                    &trans     &trans     &trans     &trans     &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &trans           &trans
-            >;
-
-            sensor-bindings = <
-                &inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT
+&kt LALT        &trans      &trans     &trans          &trans           &trans                          &trans          &trans          &trans           &trans    &trans  &trans
+&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp PG_UP                       &trans          &trans          &trans           &trans    &trans  &trans
+&kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN                       &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &mkp MB4  &trans  &trans
+&sk LCTRL       &kp LG(Z)   &kp LG(X)  &kp LG(C)       &kp LG(V)        &trans     &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5  &trans  &trans
+                            &trans     &trans          &trans           &trans     &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &trans           &trans
             >;
         };
 
@@ -576,11 +568,11 @@
         sys {
             display-name = "System";
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans        &studio_unlock                    &trans        &trans        &trans        &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans        &trans                            &trans        &trans        &trans        &trans  &trans  &trans
-&tog 3          &trans        &trans        &trans        &trans        &trans          &trans    &trans  &trans        &trans        &trans        &trans  &trans  &trans
-                              &trans        &trans        &trans        &trans          &trans    &trans  &trans        &trans        &trans        &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &studio_unlock  &soft_off  &sys_reset
+&trans          &trans        &trans        &trans        &trans        &trans                          &trans        &trans        &trans        &trans          &trans     &trans
+&trans          &trans        &trans        &trans        &trans        &trans                          &trans        &trans        &trans        &trans          &trans     &trans
+&trans          &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans          &trans     &trans
+                              &trans        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans
             >;
         };
     };
