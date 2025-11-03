@@ -495,11 +495,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&kt LALT        &trans      &trans     &trans          &trans           &trans                          &trans          &trans          &trans           &trans    &trans  &trans
-&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp PG_UP                       &trans          &trans          &trans           &trans    &trans  &trans
+&kt LALT        &kp B       &kp I      &kp U           &kp A            &trans                          &trans          &trans          &trans           &trans    &trans  &trans
+&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp PG_UP                       &trans          &mkp MB3        &trans           &trans    &trans  &trans
 &kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN                       &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &mkp MB4  &trans  &trans
 &sk LCTRL       &kp LG(Z)   &kp LG(X)  &kp LG(C)       &kp LG(V)        &trans     &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5  &trans  &trans
-                            &trans     &trans          &trans           &trans     &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &trans           &trans
+                            &trans     &trans          &trans           &trans     &trans    &mkp LCLK  &mkp RCLK       &trans          &trans           &trans
             >;
         };
 
