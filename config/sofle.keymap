@@ -469,10 +469,10 @@
             display-name = "Number";
             bindings = <
 &kp F1     &kp F2     &kp F3        &kp F4        &kp F5        &kp F6                       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11  &kp F12
-&trans     &kp SLASH  &kp N7        &kp N8        &kp N9        &kp EQUAL                    &kp PG_UP  &kp PG_DN  &mkp MB4   &mkp MB5  &trans   &trans
+&trans     &kp SLASH  &kp N7        &kp N8        &kp N9        &kp PLUS                     &kp PG_UP  &kp PG_DN  &mkp MB4   &mkp MB5  &trans   &trans
 &kt LSHFT  &kp ASTRK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS                    &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP    &trans   &trans
-&trans     &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt DOT    &trans    &trans  &kp ESC    &kp HOME   &kp END    &kp TAB   &trans   &trans
-                      &trans        &kp N0        &trans        &trans     &trans    &trans  &trans     &trans     &trans     &trans
+&trans     &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans    &trans  &kp ESC    &kp HOME   &kp END    &kp TAB   &trans   &trans
+                      &trans        &kp N0        &kp DOT       &trans     &trans    &trans  &trans     &trans     &trans     &trans
             >;
 
             sensor-bindings =
@@ -488,11 +488,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&kt LALT        &kp B       &kp I      &kp U           &kp A            &trans                          &trans          &trans          &trans           &trans    &trans  &trans
-&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp PG_UP                       &trans          &mkp MB3        &trans           &trans    &trans  &trans
-&kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN                       &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &mkp MB4  &trans  &trans
-&sk LCTRL       &kp LG(Z)   &kp LG(X)  &kp LG(C)       &kp LG(V)        &trans     &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5  &trans  &trans
-                            &trans     &trans          &trans           &trans     &trans    &mkp LCLK  &mkp RCLK       &trans          &trans           &trans
+&kt LALT        &kp B       &kp I      &kp U           &kp A            &trans                       &trans          &trans          &trans           &trans    &trans  &tog 3
+&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp PG_UP                    &trans          &mkp MB3        &trans           &trans    &trans  &trans
+&kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN                    &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &mkp MB4  &trans  &trans
+&sk LCTRL       &kp LG(Z)   &kp LG(X)  &kp LG(C)       &kp LG(V)        &trans     &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5  &trans  &trans
+                            &trans     &trans          &trans           &trans     &trans    &trans  &trans          &trans          &trans           &trans
             >;
         };
 
@@ -505,7 +505,7 @@
             display-name = "System";
             bindings = <
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &studio_unlock  &soft_off  &sys_reset
-&kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                           &kp Y         &kp U         &kp I         &kp O           &kp P      &trans
+&kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                           &kp Y         &kp U         &kp I         &kp O           &kp P      &tog 0
 &kp ESC         &kp A         &kp S         &kp D         &kp F         &kp G                           &kp H         &kp J         &kp K         &kp L           &kp SEMI   &kp SQT
 &kp LSHFT       &kp Z         &kp C         &kp X         &kp V         &kp B         &trans    &trans  &kp N         &kp M         &kp COMMA     &kp DOT         &kp FSLH   &tog 3
                               &trans        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans
