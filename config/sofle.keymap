@@ -299,11 +299,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&msc SCRL_UP    &kp N1          &kp N2              &kp N3              &kp N4              &kp N5                                           &kp N6  &kp N7    &kp N8    &kp N9    &kp N0  &kp SLASH
-&msc SCRL_DOWN  &kp Z           &kp Y               &kp O               &kp U               &kp EQUAL                                        &kp Q   &kp L     &kp D     &kp P     &kp X   &kp APOS
-&kp W           &kp C           &kp I               &kp A               &kp E               &mt SEMI LSHFT                                   &kp K   &kp H     &kp T     &kp N     &kp S   &kp F
-&msc SCRL_DOWN  &mt LCTRL APOS  &mt MINUS LEFT_ALT  &mt LEFT_GUI COMMA  &mt LEFT_SHIFT DOT  &mt LGUI SLASH  &kp C_MUTE     &kp C_PLAY_PAUSE  &kp J   &kp M     &kp G     &kp B     &kp V   &kp RIGHT_ARROW
-                                &tog 1              &tog 2              &kp SPACE           &lt 2 RET       &lt 1 SPACE    &kp SPACE         &kp R   &mkp MB1  &mkp MB2  &mkp MB3
+&msc SCRL_UP    &kp N1    &kp N2        &kp N3        &kp N4     &kp N5                                           &kp N6    &kp N7          &kp N8     &kp N9  &kp N0  &kp BACKSPACE
+&msc SCRL_DOWN  &kp Z     &kp Y         &kp O         &kp U      &kp EQUAL                                        &kp Q     &kp L           &kp D      &kp P   &kp X   &kp RET
+&kp W           &kp C     &kp I         &kp A         &kp E      &kp SEMI                                         &kp K     &kp H           &kp T      &kp N   &kp S   &kp F
+&mo 1           &kp APOS  &kp MINUS     &kp COMMA     &kp DOT    &kp FSLH        &kp C_MUTE     &kp C_PLAY_PAUSE  &kp J     &kp M           &kp G      &kp B   &kp V   &kp DELETE
+                          &sk LEFT_GUI  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &lt 2 SPACE    &kp R             &kp DOWN  &kp LEFT_ARROW  &kp RIGHT  &kp UP
             >;
 
             sensor-bindings =
