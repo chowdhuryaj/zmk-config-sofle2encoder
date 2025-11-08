@@ -488,11 +488,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&kt LALT        &kp B       &kp I      &kp U           &kp A            &trans                       &trans          &trans          &trans           &trans    &trans  &tog 3
-&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp PG_UP                    &trans          &mkp MB3        &trans           &trans    &trans  &trans
-&kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN                    &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &mkp MB4  &trans  &trans
-&sk LCTRL       &kp LG(Z)   &kp LG(X)  &kp LG(C)       &kp LG(V)        &trans     &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5  &trans  &trans
-                            &trans     &trans          &trans           &trans     &trans    &trans  &trans          &trans          &trans           &trans
+&kt LALT        &kp LG(B)   &kp LG(I)  &kp LG(U)       &kp LG(A)        &trans                       &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &tog 3
+&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp PG_UP                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN                    &trans          &mkp MB4        &mkp MB3        &mkp MB5         &trans  &trans
+&sk LCTRL       &kp LG(Z)   &kp LG(X)  &kp LG(C)       &kp LG(V)        &trans     &trans    &trans  &trans          &trans          &trans          &trans           &trans  &trans
+                            &trans     &trans          &trans           &trans     &trans    &trans  &trans          &trans          &trans          &trans
             >;
         };
 
