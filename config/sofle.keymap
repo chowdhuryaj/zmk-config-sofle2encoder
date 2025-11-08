@@ -180,21 +180,21 @@
         combo_enter {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
-            key-positions = <27 28>;
+            key-positions = <15 16>;
             bindings = <&kp RET>;
         };
 
         combo_esc {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
-            key-positions = <25 26>;
+            key-positions = <13 14>;
             bindings = <&kp ESCAPE>;
         };
 
         combo_tab {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
-            key-positions = <26 27>;
+            key-positions = <14 15>;
             bindings = <&kp TAB>;
         };
 
@@ -210,13 +210,6 @@
             require-prior-idle-ms = <200>;
             key-positions = <25 26 27>;
             bindings = <&kp BACKSPACE>;
-        };
-
-        combo_fhv {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-            key-positions = <26 27 28 25 54>;
-            bindings = <&fhv>;
         };
 
         /*
@@ -283,17 +276,6 @@
             bindings = <&paren>;   /* "(" */
         };
 
-        combo_brace_open_left {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* slightly wider reach (25 + 27) */
-
-            key-positions = <25 27 52>;
-            bindings = <&brack>;   /* "{" on US keymaps usually Shift+[" so LBRC = "[".
-                                        If you prefer true "{", switch to &kp LCBR */
-        };
-
         combo_plus_left {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
@@ -336,53 +318,13 @@
 
         /* --- RIGHT HAND SYMBOL COMBOS --- */
 
-        combo_paren_open_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* right hand home row adjacent (32 + 33) */
-
-            key-positions = <32 33>;
-            bindings = <&kp LPAR>;   /* "(" */
-        };
-
-        combo_paren_close_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* next two (33 + 34) */
-
-            key-positions = <33 34>;
-            bindings = <&kp RPAR>;   /* ")" */
-        };
-
-        combo_bracket_open_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* home row index+middle (31 + 32) */
-
-            key-positions = <31 32>;
-            bindings = <&kp LBKT>;   /* "[" */
-        };
-
-        combo_bracket_close_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* home row middle+ring (34 + 35) */
-
-            key-positions = <34 35>;
-            bindings = <&kp RBKT>;   /* "]" */
-        };
-
         combo_asterisk_right {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
 
             /* bottom row right index+middle (47 + 46) */
 
-            key-positions = <47 46>;
+            key-positions = <0 1>;
             bindings = <&kp ASTRK>;  /* "*" */
         };
 
@@ -392,7 +334,7 @@
 
             /* bottom row right middle+ring (46 + 45) */
 
-            key-positions = <46 45>;
+            key-positions = <12 13>;
             bindings = <&kp SLASH>;  /* "/" */
         };
 
@@ -402,7 +344,7 @@
 
             /* bottom row right ring+pinky (45 + 44) */
 
-            key-positions = <45 44>;
+            key-positions = <24 25>;
             bindings = <&kp AMPS>;   /* "&" */
         };
 
@@ -412,7 +354,7 @@
 
             /* home row + bottom row chord (32 + 46) */
 
-            key-positions = <32 46>;
+            key-positions = <0 12>;
             bindings = <&kp CARET>;  /* "^" */
         };
     };
