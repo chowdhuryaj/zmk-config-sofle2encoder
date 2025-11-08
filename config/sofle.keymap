@@ -212,6 +212,16 @@
             bindings = <&kp BACKSPACE>;
         };
 
+        q {
+            bindings = <&kp Q>;
+            key-positions = <14 15>;
+        };
+
+        k {
+            bindings = <&kp K>;
+            key-positions = <45 46>;
+        };
+
         /*
          * === TEXT EDIT / CLIPBOARD COMBOS (MAC-FRIENDLY) ===
          *
