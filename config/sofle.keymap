@@ -265,98 +265,7 @@
          * If any symbol feels wrong, just change the binding or change which indices are paired.
          */
         /* --- LEFT HAND SYMBOL COMBOS --- */
-
-        combo_paren_open_left {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* chord two adjacent left-hand home row keys (26 + 27) */
-
-            key-positions = <14 16>;
-            bindings = <&paren>;   /* "(" */
-        };
-
-        combo_plus_left {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* bottom row index+middle (39 + 37) */
-
-            key-positions = <39 37>;
-            bindings = <&kp PLUS>;   /* "+" */
-        };
-
-        combo_minus_left {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* bottom row adjacent (37 + 38) */
-
-            key-positions = <37 38>;
-            bindings = <&kp MINUS>;  /* "-" */
-        };
-
-        combo_underscore_left {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* bottom row ring+pinky (36 + 37) */
-
-            key-positions = <36 37>;
-            bindings = <&kp UNDERSCORE>; /* "_" */
-        };
-
-        combo_pipe_left {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* bottom row outer pair (36 + 39) */
-
-            key-positions = <36 39>;
-            bindings = <&kp PIPE>;   /* "|" */
-        };
-
         /* --- RIGHT HAND SYMBOL COMBOS --- */
-
-        combo_asterisk_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* bottom row right index+middle (47 + 46) */
-
-            key-positions = <0 1>;
-            bindings = <&kp ASTRK>;  /* "*" */
-        };
-
-        combo_slash_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* bottom row right middle+ring (46 + 45) */
-
-            key-positions = <12 13>;
-            bindings = <&kp SLASH>;  /* "/" */
-        };
-
-        combo_amp_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* bottom row right ring+pinky (45 + 44) */
-
-            key-positions = <24 25>;
-            bindings = <&kp AMPS>;   /* "&" */
-        };
-
-        combo_caret_right {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-
-            /* home row + bottom row chord (32 + 46) */
-
-            key-positions = <0 12>;
-            bindings = <&kp CARET>;  /* "^" */
-        };
     };
 
     /*
@@ -390,11 +299,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&mkp MB5        &kp N1          &kp N2              &kp N3              &kp N4              &kp N5                                          &kp N6  &kp N7    &kp N8    &kp N9    &kp N0  &kp SLASH
-&mkp MB4        &kp Z           &kp Y               &kp O               &kp U               &kp EQUAL                                       &kp Q   &kp L     &kp D     &kp P     &kp X   &kp APOS
-&kp W           &kp C           &kp I               &kp A               &kp E               &mt SEMI LSHFT                                  &kp K   &kp H     &kp T     &kp N     &kp S   &kp F
-&msc SCRL_DOWN  &mt LCTRL APOS  &mt MINUS LEFT_ALT  &mt LEFT_GUI COMMA  &mt LEFT_SHIFT DOT  &mt LGUI SLASH  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp J   &kp M     &kp G     &kp B     &kp V   &kp RIGHT_ARROW
-                                &tog 1              &tog 2              &kp BACKSPACE       &lt 2 SPACE     &lt 1 RET     &kp SPACE         &kp R   &mkp MB1  &mkp MB2  &mkp MB3
+&msc SCRL_UP    &kp N1          &kp N2              &kp N3              &kp N4              &kp N5                                           &kp N6  &kp N7    &kp N8    &kp N9    &kp N0  &kp SLASH
+&msc SCRL_DOWN  &kp Z           &kp Y               &kp O               &kp U               &kp EQUAL                                        &kp Q   &kp L     &kp D     &kp P     &kp X   &kp APOS
+&kp W           &kp C           &kp I               &kp A               &kp E               &mt SEMI LSHFT                                   &kp K   &kp H     &kp T     &kp N     &kp S   &kp F
+&msc SCRL_DOWN  &mt LCTRL APOS  &mt MINUS LEFT_ALT  &mt LEFT_GUI COMMA  &mt LEFT_SHIFT DOT  &mt LGUI SLASH  &kp C_MUTE     &kp C_PLAY_PAUSE  &kp J   &kp M     &kp G     &kp B     &kp V   &kp RIGHT_ARROW
+                                &tog 1              &tog 2              &kp SPACE           &lt 2 RET       &lt 1 SPACE    &kp SPACE         &kp R   &mkp MB1  &mkp MB2  &mkp MB3
             >;
 
             sensor-bindings =
