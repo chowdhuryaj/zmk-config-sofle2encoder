@@ -180,21 +180,21 @@
         combo_enter {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
-            key-positions = <15 16>;
+            key-positions = <27 28>;
             bindings = <&kp RET>;
         };
 
         combo_esc {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
-            key-positions = <13 14>;
+            key-positions = <25 26>;
             bindings = <&kp ESCAPE>;
         };
 
         combo_tab {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
-            key-positions = <14 15>;
+            key-positions = <26 27>;
             bindings = <&kp TAB>;
         };
 
@@ -272,7 +272,7 @@
 
             /* chord two adjacent left-hand home row keys (26 + 27) */
 
-            key-positions = <26 27 53>;
+            key-positions = <14 16>;
             bindings = <&paren>;   /* "(" */
         };
 
@@ -394,7 +394,7 @@
 &mkp MB4        &kp Z           &kp Y               &kp O               &kp U               &kp EQUAL                                       &kp Q   &kp L     &kp D     &kp P     &kp X   &kp APOS
 &kp W           &kp C           &kp I               &kp A               &kp E               &mt SEMI LSHFT                                  &kp K   &kp H     &kp T     &kp N     &kp S   &kp F
 &msc SCRL_DOWN  &mt LCTRL APOS  &mt MINUS LEFT_ALT  &mt LEFT_GUI COMMA  &mt LEFT_SHIFT DOT  &mt LGUI SLASH  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp J   &kp M     &kp G     &kp B     &kp V   &kp RIGHT_ARROW
-                                &kp TAB             &kp ESCAPE          &kp BACKSPACE       &lt 2 SPACE     &lt 1 RET     &kp SPACE         &kp R   &mkp MB1  &mkp MB2  &mkp MB3
+                                &tog 1              &tog 2              &kp BACKSPACE       &lt 2 SPACE     &lt 1 RET     &kp SPACE         &kp R   &mkp MB1  &mkp MB2  &mkp MB3
             >;
 
             sensor-bindings =
