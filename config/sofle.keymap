@@ -145,13 +145,6 @@
      */
 
     macros {
-        fhv: fhv {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp A &kp J &kp M &kp N8 &kp N5 &kp N1 &kp N1 &kp N1 &kp RET &kp LS(B) &kp N3 &kp N &kp T &kp N0 &kp N &kp LS(W) &kp N3 &kp S &kp T &kp N4 &kp N2 &kp N0 &kp DLLR &kp DLLR>;
-            label = "FHV";
-        };
-
         paren: paren {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -455,11 +448,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&mkp MB5       &kp Q      &kp W     &kp F         &kp P                 &kp B                                                                &kp J      &kp L       &kp U      &kp Y         &kp SEMI   &kp SPACE
-&mkp MB4       &kp A      &kp R     &kp S         &kp T                 &kp G                                                                &kp M      &kp N       &kp E      &kp I         &kp O      &kp APOS
-&kp PG_UP      &kp Z      &kp X     &kp C         &kp D                 &kp V                                                                &kp K      &kp H       &kp COMMA  &kp DOT       &kp FSLH   &kp SPACE
-&kp PAGE_DOWN  &sk LCTRL  &sk LALT  &mt LGUI RET  &mt LEFT_SHIFT SPACE  &kp ESCAPE              &kp C_MUTE                 &kp C_PLAY_PAUSE  &kp SPACE  &kp SPACE   &kp SPACE  &kp SPACE     &kp SPACE  &kp SPACE
-                          &kp TAB   &kp ESCAPE    &kp BACKSPACE         &lt 2 LEFT_PARENTHESIS  &lt 1 RIGHT_PARENTHESIS    &tog 1            &tog 2     &mt RALT R  &sk LCTRL  &sk LEFT_GUI
+&mkp MB5        &kp Q      &kp W     &kp F         &kp P                 &kp B                                                                &kp J          &kp L                 &kp U         &kp Y           &kp SLASH       &question_excl
+&mkp MB4        &kp A      &kp R     &kp S         &kp T                 &kp G                                                                &kp M          &kp N                 &kp E         &kp I           &kp O           &kp APOS
+&msc SCRL_UP    &kp Z      &kp X     &kp C         &kp D                 &kp V                                                                &kp K          &kp H                 &kp COMMA     &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN
+&msc SCRL_DOWN  &sk LCTRL  &sk LALT  &mt LGUI RET  &mt LEFT_SHIFT SPACE  &comma_semicolon        &kp C_MUTE                 &kp C_PLAY_PAUSE  &period_colon  &mt LEFT_SHIFT SPACE  &mt LGUI RET  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                           &kp TAB   &kp ESCAPE    &kp BACKSPACE         &lt 2 LEFT_PARENTHESIS  &lt 1 RIGHT_PARENTHESIS    &tog 1            &tog 2         &mkp MB1              &mkp MB2      &mkp MB3
             >;
 
             sensor-bindings =
