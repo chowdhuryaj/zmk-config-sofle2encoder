@@ -349,12 +349,16 @@
         nav {
             display-name = "Nav";
             bindings = <
-&kt LALT        &kp LC(B)   &kp LC(I)  &kp LC(U)       &kp LC(A)        &trans                         &trans          &trans          &trans          &trans           &trans           &tog 3
-&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp LC(T)                      &trans          &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans           &trans
-&kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(W)                      &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
-&sk LCTRL       &kp LC(Z)   &kp LC(X)  &kp LC(C)       &kp LC(V)        &kp LG(TAB)  &trans    &trans  &mkp MB4        &mkp LCLK       &mkp MB3        &mkp RCLK        &mkp MB5         &trans
-                            &trans     &trans          &trans           &trans       &trans    &trans  &trans          &trans          &trans          &trans
+&kt LALT        &kp LC(B)   &kp LC(I)  &kp LC(U)       &kp LC(A)          &trans                         &trans          &trans          &trans          &trans           &trans           &tog 3
+&sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END            &kp LC(T)                      &trans          &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans           &trans
+&kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp LC(W)                      &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
+&sk LCTRL       &kp LC(Z)   &kp LC(X)  &kp LC(C)       &kp LC(V)          &kp LG(TAB)  &trans    &trans  &mkp MB4        &mkp LCLK       &mkp MB3        &mkp RCLK        &mkp MB5         &trans
+                            &trans     &trans          &kp LA(BACKSPACE)  &trans       &trans    &trans  &trans          &trans          &trans          &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp LC(TAB) LC(LG(TAB))>,
+                <&inc_dec_kp LG(TAB) LC(LG(TAB))>;
         };
 
         /*
