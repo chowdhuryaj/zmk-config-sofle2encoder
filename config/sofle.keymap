@@ -217,9 +217,9 @@
             key-positions = <14 15>;
         };
 
-        k {
-            bindings = <&kp K>;
-            key-positions = <45 46>;
+        y {
+            bindings = <&kp Y>;
+            key-positions = <19 20>;
         };
 
         /*
@@ -310,8 +310,8 @@
             display-name = "Base";
             bindings = <
 &mkp MB5        &kp N1      &kp N2       &kp N3      &kp N4    &kp N5                                                &kp N6    &kp N7          &kp N8          &kp N9         &kp N0               &kp EQUAL
-&mkp MB4        &kp Q       &kp W        &kp E       &kp R     &kp T                                                 &kp Y     &kp U           &kp I           &kp O          &kp SQT              &kp MINUS
-&msc SCRL_UP    &kp A       &kp S        &kp D       &kp F     &kp G                                                 &kp H     &kp J           &kp K           &kp L          &kp P                &kp SEMI
+&mkp MB4        &kp Q       &kp W        &kp E       &kp R     &kp T                                                 &kp Y     &kp U           &kp I           &kp O          &kp P                &kp MINUS
+&msc SCRL_UP    &kp A       &kp S        &kp D       &kp F     &kp G                                                 &kp H     &kp J           &kp K           &kp L          &kp SEMI             &kp SQT
 &msc SCRL_DOWN  &mt LALT Z  &mt LCTRL X  &mt LCMD C  &kp V     &kp B                 &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N     &kp M           &mt LCMD COMMA  &mt LCTRL DOT  &mt RIGHT_ALT SLASH  &kp RET
                             &kp ESC      &kp TAB     &kp BSPC  &mt LEFT_SHIFT SPACE  &tog 2        &lt 1 SPACE       &kp DOWN  &kp LEFT_ARROW  &kp RIGHT       &kp UP
             >;
