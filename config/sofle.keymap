@@ -352,7 +352,7 @@
 &kt LALT        &kp LC(B)   &kp LC(I)  &kp LC(U)       &kp LC(A)        &trans                       &trans          &trans          &trans          &trans           &trans           &tog 3
 &sk LGUI        &kp ESCAPE  &kp HOME   &kp UP_ARROW    &kp END          &kp PG_UP                    &trans          &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans           &trans
 &kt LEFT_SHIFT  &kp TAB     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN                    &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
-&sk LCTRL       &kp LC(Z)   &kp LC(X)  &kp LC(C)       &kp LC(V)        &trans     &trans    &trans  &trans          &mkp LCLK       &mkp MB3        &mkp RCLK        &trans           &trans
+&sk LCTRL       &kp LC(Z)   &kp LC(X)  &kp LC(C)       &kp LC(V)        &trans     &trans    &trans  &mkp MB4        &mkp LCLK       &mkp MB3        &mkp RCLK        &mkp MB5         &trans
                             &trans     &trans          &trans           &trans     &trans    &trans  &trans          &trans          &trans          &trans
             >;
         };
