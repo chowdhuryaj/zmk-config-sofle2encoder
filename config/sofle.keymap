@@ -57,23 +57,6 @@
 
 / {
     behaviors {
-        /*
-         * Left-hand home row mod behavior
-         * - Tap sends the normal key
-         * - Hold sends the modifier
-         * - It only "commits" to the hold (modifier)
-         *   if you press/release something from the RIGHT hand.
-         */
-        /*
-         * Right-hand home row mod behavior
-         * Same idea, but flipped:
-         * It only turns into a "hold" mod if you chord with LEFT-hand keys.
-         */
-        /*
-         * You already had a caps word behavior called "caps".
-         * Keeping it exactly.
-         */
-
         caps: caps {
             compatible = "zmk,behavior-caps-word";
             label = "CAPS";
@@ -81,31 +64,56 @@
             continue-list = <>;
         };
 
-        comma_semicolon: comma_semicolon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_SEMICOLON";
-            bindings = <&kp COMMA>, <&kp SEMI>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+        /* === FAST MOVEMENT (≈1.5× speed) === */
+        mmv_fast: mmv_fast {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MMV FAST";
+            #binding-cells = <2>;
+            input-code-x = <REL_X>;
+            input-code-y = <REL_Y>;
+            time-to-max-speed-ms = <200>;   /* 1.5x */
+            acceleration-exponent = <1>;
+            trigger-period-ms = <16>;
+            delay-ms = <0>;
         };
 
-        period_colon: period_colon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PERIOD_COLON";
-            bindings = <&kp KP_DOT>, <&kp COLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+        /* === SLOW MOVEMENT (≈0.5× speed) === */
+        mmv_slow: mmv_slow {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MMV SLOW";
+            #binding-cells = <2>;
+            input-code-x = <REL_X>;
+            input-code-y = <REL_Y>;
+            time-to-max-speed-ms = <600>;   /* 0.5x */
+            acceleration-exponent = <1>;
+            trigger-period-ms = <16>;
+            delay-ms = <0>;
         };
 
-        question_excl: question_excl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "QUESTION_EXCL";
-            bindings = <&kp QUESTION>, <&kp EXCL>;
+        /* === FAST SCROLL (≈1.5× speed) === */
+        msc_fast: msc_fast {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MSC FAST";
+            #binding-cells = <2>;
+            input-code-x = <REL_HWHEEL>;
+            input-code-y = <REL_WHEEL>;
+            time-to-max-speed-ms = <200>;   /* 1.5x */
+            acceleration-exponent = <1>;
+            trigger-period-ms = <16>;
+            delay-ms = <0>;
+        };
 
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+        /* === SLOW SCROLL (≈0.5× speed) === */
+        msc_slow: msc_slow {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MSC SLOW";
+            #binding-cells = <2>;
+            input-code-x = <REL_HWHEEL>;
+            input-code-y = <REL_WHEEL>;
+            time-to-max-speed-ms = <600>;   /* 0.5x */
+            acceleration-exponent = <1>;
+            trigger-period-ms = <16>;
+            delay-ms = <0>;
         };
     };
 
