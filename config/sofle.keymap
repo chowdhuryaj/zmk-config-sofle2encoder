@@ -304,7 +304,7 @@
 &trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK  &kp LC(T)                         &trans          &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans           &trans
 &trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp LC(W)                         &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LG(TAB)  &trans    &trans     &trans          &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
-                   &kt LALT   &mo 3      &mo 4      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT        &kp LGUI        &trans
+                   &kt LALT   &mo 4      &mo 3      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT        &kp LGUI        &trans
             >;
 
             sensor-bindings =
@@ -319,7 +319,7 @@
 &trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK  &kp LC(T)                         &trans          &msc SCRL_UP         &mmv_slow MOVE_UP    &msc SCRL_DOWN        &trans           &trans
 &trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp LC(W)                         &msc SCRL_LEFT  &mmv_slow MOVE_LEFT  &mmv_slow MOVE_DOWN  &mmv_slow MOVE_RIGHT  &msc SCRL_RIGHT  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LG(TAB)  &trans    &trans     &trans          &msc SCRL_UP         &msc SCRL_DOWN       &msc SCRL_LEFT        &msc SCRL_RIGHT  &trans
-                   &kt LALT   &mo 3      &mo 4      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT             &kp LGUI             &trans
+                   &kt LALT   &mo 4      &mo 3      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT             &kp LGUI             &trans
             >;
 
             sensor-bindings =
@@ -334,7 +334,7 @@
 &trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK  &kp LC(T)                         &trans          &msc SCRL_UP         &mmv_fast MOVE_UP    &msc SCRL_DOWN        &trans           &trans
 &trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp LC(W)                         &msc SCRL_LEFT  &mmv_fast MOVE_LEFT  &mmv_fast MOVE_DOWN  &mmv_fast MOVE_RIGHT  &msc SCRL_RIGHT  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LG(TAB)  &trans    &trans     &trans          &msc SCRL_UP         &msc SCRL_DOWN       &msc SCRL_LEFT        &msc SCRL_RIGHT  &trans
-                   &kt LALT   &mo 3      &mo 4      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT             &kp LGUI             &trans
+                   &kt LALT   &mo 4      &mo 3      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT             &kp LGUI             &trans
             >;
 
             sensor-bindings =
