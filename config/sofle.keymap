@@ -90,32 +90,6 @@
             delay-ms = <0>;
         };
 
-        /* SLOW SCROLL (0.5× feel) — SCROLL, not movement */
-        msc_slow: msc_slow {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "MSC SLOW";
-            #binding-cells = <2>;
-            /* SCROLL codes (horizontal / vertical) */
-            input-code-x = <REL_HWHEEL>;
-            input-code-y = <REL_WHEEL>;
-            time-to-max-speed-ms = <600>;
-            acceleration-exponent = <1>;
-            trigger-period-ms = <16>;
-            delay-ms = <0>;
-        };
-
-        /* FAST SCROLL (1.5× feel) */
-        msc_fast: msc_fast {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "MSC FAST";
-            #binding-cells = <2>;
-            input-code-x = <REL_HWHEEL>;
-            input-code-y = <REL_WHEEL>;
-            time-to-max-speed-ms = <200>;
-            acceleration-exponent = <1>;
-            trigger-period-ms = <16>;
-            delay-ms = <0>;
-        };
     };
 
     /*
