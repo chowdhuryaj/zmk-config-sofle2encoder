@@ -338,7 +338,7 @@
 &trans     &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK          &kp LC(T)                         &trans          &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans           &trans
 &kp LSHFT  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP             &kp LC(W)                         &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
 &kp LCTRL  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)          &kp LG(TAB)  &trans    &trans     &trans          &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
-                      &kt LALT   &mo 30     &mo 31  &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT        &kp LGUI        &trans
+                      &kt LALT   &mo L_SLOW &mo L_FAST         &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT        &kp LGUI        &trans
             >;
 
             sensor-bindings =
