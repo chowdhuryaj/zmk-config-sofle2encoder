@@ -1,24 +1,18 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
-/* Hidden marker layers for speed stackers */
-#define L_S1     31  /* light boost */
-#define L_S2     30  /* medium boost */
-#define L_S3     29  /* heavy boost */
-#define L_SLOW   28  /* precision slow */
+/* Marker layers only used by processors */
+#define L_FAST 31
+#define L_SLOW 30
 
-/* Mouse movement listeners */
+/* Mouse movement */
 &mmv_input_listener {
-    s1   { layers = <L_S1>;   input-processors = <&zip_xy_scaler 4 3>; process-next; };
-    s2   { layers = <L_S2>;   input-processors = <&zip_xy_scaler 3 2>; process-next; };
-    s3   { layers = <L_S3>;   input-processors = <&zip_xy_scaler 2 1>; process-next; };
-    slow { layers = <L_SLOW>; input-processors = <&zip_xy_scaler 1 2>; process-next; };
+    fast { layers = <L_FAST>; input-processors = <&zip_xy_scaler 3 2>; process-next; };  /* ×1.5 */
+    slow { layers = <L_SLOW>; input-processors = <&zip_xy_scaler 1 2>; process-next; };  /* ×0.5 */
 };
 
-/* Scroll listeners */
+/* Scroll */
 &msc_input_listener {
-    s1   { layers = <L_S1>;   input-processors = <&zip_scroll_scaler 4 3>; process-next; };
-    s2   { layers = <L_S2>;   input-processors = <&zip_scroll_scaler 3 2>; process-next; };
-    s3   { layers = <L_S3>;   input-processors = <&zip_scroll_scaler 2 1>; process-next; };
+    fast { layers = <L_FAST>; input-processors = <&zip_scroll_scaler 3 2>; process-next; };
     slow { layers = <L_SLOW>; input-processors = <&zip_scroll_scaler 1 2>; process-next; };
 };
