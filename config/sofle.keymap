@@ -65,6 +65,7 @@
         };
 
         /* === FAST MOVEMENT (≈1.5× speed) === */
+
         mmv_fast: mmv_fast {
             compatible = "zmk,behavior-input-two-axis";
             label = "MMV FAST";
@@ -78,6 +79,7 @@
         };
 
         /* === SLOW MOVEMENT (≈0.5× speed) === */
+
         mmv_slow: mmv_slow {
             compatible = "zmk,behavior-input-two-axis";
             label = "MMV SLOW";
@@ -89,7 +91,6 @@
             trigger-period-ms = <16>;
             delay-ms = <0>;
         };
-
     };
 
     /*
@@ -289,11 +290,6 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-        /*
-         * LAYER 1: num
-         * unchanged from your file
-         */
-
         num {
             display-name = "Number";
             bindings = <
@@ -309,19 +305,14 @@
                 <&inc_dec_kp RIGHT LEFT>;
         };
 
-        /*
-         * LAYER 2: nav
-         * unchanged from your file
-         */
-
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &kp LC(B)  &kp LC(I)  &kp LC(U)  &kp LC(A)  &trans                            &trans          &trans          &trans          &trans           &trans           &tog 3
+&trans  &kp LC(B)  &kp LC(I)  &kp LC(U)  &kp LC(A)  &trans                            &trans          &trans          &trans          &trans           &trans           &tog 5
 &trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK  &kp LC(T)                         &trans          &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans           &trans
 &trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp LC(W)                         &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LG(TAB)  &trans    &trans     &trans          &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans
-                   &kt LALT   &mo L_SLOW &mo L_FAST     &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT        &kp LGUI        &trans
+                   &kt LALT   &mo 3      &mo 4      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT        &kp LGUI        &trans
             >;
 
             sensor-bindings =
@@ -329,10 +320,35 @@
                 <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
         };
 
-        /*
-         * LAYER 3: sys
-         * untouched from your file
-         */
+        nav_slow {
+            display-name = "Nav slow";
+            bindings = <
+&trans  &kp LC(B)  &kp LC(I)  &kp LC(U)  &kp LC(A)  &trans                            &trans          &trans               &trans               &trans                &trans           &tog 5
+&trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK  &kp LC(T)                         &trans          &msc SCRL_UP         &mmv_slow MOVE_UP    &msc SCRL_DOWN        &trans           &trans
+&trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp LC(W)                         &msc SCRL_LEFT  &mmv_slow MOVE_LEFT  &mmv_slow MOVE_DOWN  &mmv_slow MOVE_RIGHT  &msc SCRL_RIGHT  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LG(TAB)  &trans    &trans     &trans          &msc SCRL_UP         &msc SCRL_DOWN       &msc SCRL_LEFT        &msc SCRL_RIGHT  &trans
+                   &kt LALT   &mo 3      &mo 4      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT             &kp LGUI             &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp LC(TAB) LC(LS(TAB))>,
+                <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
+        };
+
+        nav_fast {
+            display-name = "Nav fast";
+            bindings = <
+&trans  &kp LC(B)  &kp LC(I)  &kp LC(U)  &kp LC(A)  &trans                            &trans          &trans               &trans               &trans                &trans           &tog 5
+&trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK  &kp LC(T)                         &trans          &msc SCRL_UP         &mmv_fast MOVE_UP    &msc SCRL_DOWN        &trans           &trans
+&trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp LC(W)                         &msc SCRL_LEFT  &mmv_fast MOVE_LEFT  &mmv_fast MOVE_DOWN  &mmv_fast MOVE_RIGHT  &msc SCRL_RIGHT  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LG(TAB)  &trans    &trans     &trans          &msc SCRL_UP         &msc SCRL_DOWN       &msc SCRL_LEFT        &msc SCRL_RIGHT  &trans
+                   &kt LALT   &mo 3      &mo 4      &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL       &kp LALT             &kp LGUI             &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp LC(TAB) LC(LS(TAB))>,
+                <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
+        };
 
         sys {
             display-name = "System";
@@ -340,7 +356,7 @@
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &studio_unlock  &soft_off  &sys_reset
 &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                           &kp Y         &kp U         &kp I         &kp O           &kp P      &tog 0
 &kp ESC         &kp A         &kp S         &kp D         &kp F         &kp G                           &kp H         &kp J         &kp K         &kp L           &kp SEMI   &kp SQT
-&kp LSHFT       &kp Z         &kp C         &kp X         &kp V         &kp B         &trans    &trans  &kp N         &kp M         &kp COMMA     &kp DOT         &kp FSLH   &tog 3
+&kp LSHFT       &kp Z         &kp C         &kp X         &kp V         &kp B         &trans    &trans  &kp N         &kp M         &kp COMMA     &kp DOT         &kp FSLH   &tog 5
                               &trans        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans
             >;
         };
