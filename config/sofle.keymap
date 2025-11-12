@@ -254,11 +254,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &kp LC(B)  &kp LC(I)  &kp LC(U)  &kp LC(A)  &trans                            &trans     &trans          &trans          &trans           &trans           &tog 3
-&trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK  &kp LC(T)                         &trans     &kp HOME        &mmv MOVE_UP    &kp END          &trans           &trans
-&trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP     &kp LC(W)                         &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(TAB)  &trans    &trans     &trans     &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &tog 2
-                   &trans     &trans     &trans     &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL  &kp LALT        &kp LGUI        &trans
+&trans  &kp LC(B)  &kp LC(I)  &kp LC(U)  &kp LC(A)      &trans                            &trans     &trans          &trans          &trans           &trans           &tog 3
+&trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK      &kp LC(T)                         &trans     &kp HOME        &mmv MOVE_UP    &kp END          &trans           &trans
+&trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP         &kp LC(W)                         &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)      &kp LC(TAB)  &trans    &trans     &trans     &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &tog 2
+                   &trans     &trans     &kp LC(SPACE)  &mkp LCLK    &trans    &kp LSHFT  &kp LCTRL  &kp LALT        &kp LGUI        &trans
             >;
         };
 
