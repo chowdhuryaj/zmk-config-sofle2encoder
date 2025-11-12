@@ -274,7 +274,7 @@
             bindings = <
 &kp F1  &kp F2        &kp F3        &kp F4         &kp F5        &kp F6                         &kp F7         &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
 &none   &kp LS(EXCL)  &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp BACKSPACE
-&none   &as N1        &as N2        &as N3         &as N4        &a N5                         &as N6         &as N7        &as N8        &as N9        &as N0        &kp RET
+&none   &as N1        &as N2        &as N3         &as N4        &as N5                         &as N6         &as N7        &as N8        &as N9        &as N0        &kp RET
 &none   &kp MINUS     &kp LS(PLUS)  &kp FSLH       &kp LS(STAR)  &kp EQUAL      &none    &none  &kp ESC        &kp HOME      &kp END       &kp TAB       &none         &tog 1
                       &none         &none          &none         &none          &none    &none  &none          &none         &none         &none
             >;
