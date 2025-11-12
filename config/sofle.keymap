@@ -239,11 +239,11 @@
         num {
             display-name = "Number";
             bindings = <
-&kp F1  &kp F2        &kp F3        &kp F4         &kp F5        &kp F6                           &kp F7         &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
-&trans  &kp LS(EXCL)  &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp BACKSPACE
-&trans  &kp N1        &kp N2        &kp N3         &kp N4        &kp N5                           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp RET
-&trans  &kp MINUS     &kp LS(PLUS)  &kp FSLH       &kp LS(STAR)  &kp EQUAL      &trans    &trans  &kp ESC        &kp HOME      &kp END       &kp TAB       &trans        &tog 1
-                      &trans        &trans         &trans        &trans         &trans    &trans  &trans         &trans        &trans        &trans
+&kp F1  &kp F2        &kp F3        &kp F4         &kp F5        &kp F6                         &kp F7         &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
+&none   &kp LS(EXCL)  &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp BACKSPACE
+&none   &kp N1        &kp N2        &kp N3         &kp N4        &kp N5                         &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp RET
+&none   &kp MINUS     &kp LS(PLUS)  &kp FSLH       &kp LS(STAR)  &kp EQUAL      &none    &none  &kp ESC        &kp HOME      &kp END       &kp TAB       &none         &tog 1
+                      &none         &none          &none         &none          &none    &none  &none          &none         &none         &none
             >;
 
             sensor-bindings =
@@ -254,11 +254,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &trans     &trans     &trans     &trans               &trans                         &trans     &trans          &trans          &trans           &trans           &tog 3
-&trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK            &kp LG(T)                      &trans     &kp HOME        &mmv MOVE_UP    &kp END          &trans           &trans
-&trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP               &kp LG(W)                      &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)            &kp LG(TAB)  &trans    &trans  &trans     &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &tog 2
-                   &trans     &trans     &mt LSHFT LG(SPACE)  &mkp LCLK    &trans    &trans  &kp LCTRL  &kp LALT        &kp LCMD        &trans
+&none  &none      &none      &none      &none                &none                        &none      &none           &none           &none            &none            &tog 3
+&none  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK            &kp LG(T)                    &none      &kp HOME        &mmv MOVE_UP    &kp END          &none            &none
+&none  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP               &kp LG(W)                    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &none
+&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)            &kp LG(TAB)  &none    &none  &none      &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &tog 2
+                  &none      &none      &mt LSHFT LG(SPACE)  &mkp LCLK    &none    &none  &kp LCTRL  &kp LALT        &kp LCMD        &none
             >;
         };
 
