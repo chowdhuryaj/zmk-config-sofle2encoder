@@ -224,11 +224,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&paren     &kp N1      &kp N2      &kp N3         &kp N4         &kp N5                                              &kp N6       &kp N7         &kp N8        &kp N9      &kp N0      &kp EQUAL
-&kp LCMD   &kp Q       &kp W       &kp F          &kp P          &kp B                                               &kp J        &kp L          &kp U         &kp Y       &kp SQT     &kp PLUS
-&sk LSHFT  &mt LCMD A  &mt LALT R  &mt LCTRL S    &mt LSHFT T    &kp G                                               &kp M        &mt LSHIFT N   &mt LCTRL E   &mt LCMD I  &mt LGUI O  &kp MINUS
-&kp LCTRL  &kp Z       &kp X       &kp C          &kp D          &kp V            &kp C_MUTE       &kp C_PLAY_PAUSE  &kp K        &kp H          &kp COMMA     &kp DOT     &kp FSLH    &kp ASTERISK
-                       &kp COLON   &kp SEMICOLON  &kp BACKSPACE  &mt LSHFT SPACE  &mt LCTRL RET    &mt LCTRL ENTER   &key_repeat  &kp BACKSPACE  &kp QUESTION  &kp EXCL
+&paren        &kp N1  &kp N2     &kp N3         &kp N4         &kp N5                                             &kp N6       &kp N7         &kp N8        &kp N9      &kp N0       &kp EQUAL
+&mt LALT TAB  &kp Q   &kp W      &kp F          &kp P          &kp B                                              &kp J        &kp L          &kp U         &kp Y       &kp SQT      &kp PLUS
+&kp ESC       &kp A   &kp R      &kp S          &kp T          &kp G                                              &kp M        &mt LSHIFT N   &mt LGUI E    &mt LALT I  &mt LCTRL O  &kp MINUS
+&kp LCTRL     &kp Z   &kp X      &kp C          &kp D          &kp V            &kp C_MUTE      &kp C_PLAY_PAUSE  &kp K        &kp H          &kp COMMA     &kp DOT     &kp FSLH     &kp ASTERISK
+                      &kp COLON  &kp SEMICOLON  &kp BACKSPACE  &mt LSHFT SPACE  &mt LCMD RET    &mt RCMD ENTER    &key_repeat  &kp BACKSPACE  &kp QUESTION  &kp EXCL
             >;
 
             sensor-bindings =
@@ -254,10 +254,10 @@
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &kp LC(B)  &kp LC(I)  &kp LC(U)  &kp LC(A)      &trans                            &trans     &trans          &trans          &trans           &trans           &tog 3
-&trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK      &kp LC(T)                         &trans     &kp HOME        &mmv MOVE_UP    &kp END          &trans           &trans
-&trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP         &kp LC(W)                         &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)      &kp LC(TAB)  &trans    &trans     &trans     &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &tog 2
+&trans  &kp LG(B)  &kp LG(I)  &kp LG(U)  &kp LG(A)      &kp LC(TAB)                       &trans     &trans          &trans          &trans           &trans           &tog 3
+&trans  &mkp MB5   &mkp MB4   &mkp MCLK  &mkp RCLK      &kp LG(T)                         &trans     &kp HOME        &mmv MOVE_UP    &kp END          &trans           &trans
+&trans  &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP         &kp LG(W)                         &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(TAB)  &trans    &trans     &trans     &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &tog 2
                    &trans     &trans     &kp LC(SPACE)  &mkp LCLK    &trans    &kp LCTRL  &kp LSHFT  &kp LALT        &kp LCMD        &trans
             >;
         };
