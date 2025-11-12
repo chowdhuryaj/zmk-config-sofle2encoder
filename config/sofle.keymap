@@ -111,13 +111,6 @@
          * I'm leaving them exactly as-is so nothing breaks.
          */
 
-        combo_enter {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-            key-positions = <27 28>;
-            bindings = <&kp RET>;
-        };
-
         combo_esc {
             timeout-ms = <40>;
             require-prior-idle-ms = <200>;
@@ -130,40 +123,6 @@
             require-prior-idle-ms = <200>;
             key-positions = <26 27>;
             bindings = <&kp TAB>;
-        };
-
-        combo_del {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-            key-positions = <38 39>;
-            bindings = <&kp DEL>;
-        };
-
-        combo_bspc {
-            timeout-ms = <40>;
-            require-prior-idle-ms = <200>;
-            key-positions = <39 40>;
-            bindings = <&kp BACKSPACE>;
-        };
-
-        q {
-            bindings = <&kp Q>;
-            key-positions = <14 15>;
-        };
-
-        y {
-            bindings = <&kp Y>;
-            key-positions = <19 20>;
-        };
-
-        p {
-            bindings = <&kp P>;
-            key-positions = <33 34>;
-        };
-
-        n {
-            bindings = <&kp N>;
-            key-positions = <20 21>;
         };
 
         numtoggle {
