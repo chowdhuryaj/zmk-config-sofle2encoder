@@ -224,11 +224,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&trans        &trans  &trans  &trans  &trans            &trans                                           &trans       &trans         &trans        &trans    &trans    &trans
-&mt LALT TAB  &kp Q   &kp W   &kp L   &kp D             &kp G                                            &kp L        &kp F          &kp O         &kp U     &kp SEMI  &trans
-&kp ESC       &kp A   &kp S   &kp R   &kp T             &kp G                                            &kp Y        &kp N          &kp E         &kp I     &kp H     &trans
-&kp LCTRL     &kp Z   &kp X   &kp C   &kp V             &kp B            &kp C_MUTE    &kp C_PLAY_PAUSE  &kp K        &kp M          &kp COMMA     &kp DOT   &kp FSLH  &trans
-                      &trans  &trans  &mt LEFT_GUI RET  &mt LSHFT SPACE  &lt 1 RGUI    &tog 2            &key_repeat  &kp BACKSPACE  &kp QUESTION  &kp EXCL
+&none         &none  &none  &none  &none             &none                                            &none        &none          &none         &none     &none     &none
+&mt LALT TAB  &kp Q  &kp W  &kp L  &kp D             &kp G                                            &kp L        &kp F          &kp O         &kp U     &kp SEMI  &none
+&kp ESC       &kp A  &kp S  &kp R  &kp T             &kp G                                            &kp Y        &kp N          &kp E         &kp I     &kp H     &none
+&kp LCTRL     &kp Z  &kp X  &kp C  &kp V             &kp B            &kp C_MUTE    &kp C_PLAY_PAUSE  &kp K        &kp M          &kp COMMA     &kp DOT   &kp FSLH  &none
+                     &none  &none  &mt LEFT_GUI RET  &mt LSHFT SPACE  &lt 1 RGUI    &tog 2            &key_repeat  &kp BACKSPACE  &kp QUESTION  &kp EXCL
             >;
 
             sensor-bindings =
@@ -239,11 +239,11 @@
         num {
             display-name = "Number";
             bindings = <
-&kp F1  &kp F2     &kp F3        &kp F4        &kp F5        &kp F6                       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11  &kp F12
-&trans  &kp SLASH  &kp N7        &kp N8        &kp N9        &kp PLUS                     &kp PG_UP  &kp PG_DN  &mkp MB4   &mkp MB5  &trans   &trans
-&trans  &kp ASTRK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS                    &kp DOWN   &kp LEFT   &kp RIGHT  &kp UP    &trans   &trans
-&trans  &kp DOT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans    &trans  &kp ESC    &kp HOME   &kp END    &kp TAB   &trans   &tog 1
-                   &kp BSPC      &trans        &kp RET       &kp N0     &trans    &trans  &trans     &trans     &trans     &trans
+&kp F1  &kp F2        &kp F3        &kp F4         &kp F5        &kp F6                           &kp F7         &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
+&trans  &kp LS(EXCL)  &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &trans
+&trans  &kp N1        &kp N2        &kp N3         &kp N4        &kp N5                           &kp LBKT       &kp RBKT      &kp LBKT      &kp RBKT      &trans        &trans
+&trans  &kp MINUS     &kp LS(PLUS)  &kp FSLH       &kp LS(STAR)  &kp EQUAL      &trans    &trans  &kp ESC        &kp HOME      &kp END       &kp TAB       &kp FSLH      &tog 1
+                      &kp BSPC      &kp SPACE      &kp RET       &kp N0         &trans    &trans  &trans         &trans        &trans        &trans
             >;
 
             sensor-bindings =
