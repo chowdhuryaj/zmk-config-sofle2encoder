@@ -263,9 +263,9 @@
             bindings = <
 &none         &none  &none  &none  &none             &none                                            &none        &none          &none         &none     &none     &none
 &mt LALT TAB  &as Q  &as W  &as L  &as D             &as G                                            &as J        &as F          &as O         &as U     &as SEMI  &none
-&kp ESC       &as A  &as S  &as R  &as T             &as P                                            &as Y        &as N          &as E         &as I     &as H     &as APOS
+&kp RC(RGUI)  &as A  &as S  &as R  &as T             &as P                                            &as Y        &as N          &as E         &as I     &as H     &as APOS
 &kp LCTRL     &as Z  &as X  &as C  &as V             &as B            &kp C_MUTE    &kp C_PLAY_PAUSE  &as K        &as M          &as COMMA     &as DOT   &as FSLH  &none
-                     &none  &none  &mt LEFT_GUI RET  &mt LSHFT SPACE  &lt 1 RGUI    &sl 2             &key_repeat  &kp BACKSPACE  &kp QUESTION  &kp EXCL
+                     &none  &none  &mt LEFT_GUI RET  &mt LSHFT SPACE  &lt 1 RGUI    &lt 2 RET         &key_repeat  &kp BACKSPACE  &kp QUESTION  &kp EXCL
             >;
 
             sensor-bindings =
