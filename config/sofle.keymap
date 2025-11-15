@@ -301,11 +301,11 @@
         nav {
             display-name = "Nav";
             bindings = <
-&none  &none      &none      &none      &none                &none                          &none     &none           &none           &none             &none            &tog 3
-&none  &none      &kp HOME   &kp UP     &kp END              &kp LG(T)                      &none     &mkp MB2        &mmv MOVE_UP    &mkp MB3          &none            &none
-&none  &none      &kp LEFT   &kp DOWN   &kp RIGHT            &kp LG(W)                      &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mkp MB5         &none
-&none  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)            &kp LG(TAB)  &none     &none   &none     &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT    &msc SCRL_RIGHT  &tog 2
-                  &none      &kp LSHFT  &mt LSHFT LG(SPACE)  &trans       &trans    &trans  &mkp MB1  &kp LALT        &kp LCMD        &kp LEFT_CONTROL
+&none  &none              &none      &none      &none                &none                          &none     &none           &none           &none             &none            &tog 3
+&none  &kp LA(BACKSPACE)  &kp HOME   &kp UP     &kp END              &kp LG(T)                      &none     &mkp MB2        &mmv MOVE_UP    &mkp MB3          &none            &none
+&none  &kp LG(A)          &kp LEFT   &kp DOWN   &kp RIGHT            &kp LG(W)                      &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mkp MB5         &none
+&none  &kp LG(Z)          &kp LG(X)  &kp LG(C)  &kp LG(V)            &kp LG(TAB)  &none     &none   &none     &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT    &msc SCRL_RIGHT  &tog 2
+                          &none      &kp LSHFT  &mt LSHFT LG(SPACE)  &trans       &trans    &trans  &mkp MB1  &kp LALT        &kp LCMD        &kp LEFT_CONTROL
             >;
         };
 
