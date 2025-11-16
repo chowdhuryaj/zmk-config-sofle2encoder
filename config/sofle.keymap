@@ -4,21 +4,20 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <behaviors/num_word.dtsi>
 
-/* Pointer tuning from your file */
+/* Pointer tuning */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 2000
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30
 
-/* Encoder tuning from your file */
+/* Encoder tuning */
 
 &sensors { triggers-per-rotation = <30>; };
 
 &left_encoder { steps = <60>; };
 
 &right_encoder { steps = <60>; };
-
-/* Your original global &mt tweaks */
 
 &mt {
     flavor = "balanced";
@@ -28,35 +27,6 @@
 };
 
 &mmv { time-to-max-speed-ms = <450>; };
-
-/*
- * -----------------------------------------------------------------------------
- * Timerless-style Home Row Mods (plain devicetree version)
- * -----------------------------------------------------------------------------
- *
- * We define two explicit behaviors:
- *   hml = left-hand home row mod
- *   hmr = right-hand home row mod
- *
- * Both are zmk,behavior-hold-tap with:
- *  - flavor = "balanced"
- *  - long tapping-term (500ms)
- *  - require-prior-idle-ms (200ms)
- *  - hold-trigger-on-release
- *  - hold-trigger-key-positions = <...>
- *
- * The big trick:
- *    For LEFT-hand keys (A/S/D/F),
- *      we want them to become modifiers ONLY when you chord with the RIGHT hand.
- *    For RIGHT-hand keys (J/K/L/;),
- *      we want them to become modifiers ONLY when you chord with the LEFT hand.
- *
- * We hardcode those position lists right here based on Sofle matrix indices.
- *
- * NOTE:
- * These position lists intentionally do NOT include the encoder press switches,
- * so clicking your knobs won't accidentally force a hold.
- */
 
 / {
     behaviors {
