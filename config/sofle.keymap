@@ -63,7 +63,7 @@
         caps: caps {
             compatible = "zmk,behavior-caps-word";
             label = "CAPS";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             continue-list = <>;
         };
 
