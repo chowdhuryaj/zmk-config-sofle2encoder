@@ -212,10 +212,10 @@
             display-name = "Base";
             bindings = <
 &none  &none        &none       &none       &none          &none                                        &none    &none        &none       &none       &none        &none
-&none  &kp Z        &kp Y       &kp O       &kp U          &kp EQUAL                                    &kp Q    &kp G        &kp D       &kp P       &kp X        &none
-&none  &mt LCTRL C  &mt LALT I  &mt LGUI A  &mt LSHFT E    &kp SEMI                                     &kp K    &mt RSHFT L  &mt RGUI T  &mt RALT N  &mt RCTRL F  &none
+&none  &kp Z        &kp Y       &kp O       &kp U          &kp EQUAL                                    &kp Q    &kp F        &kp D       &kp P       &kp X        &none
+&none  &mt LCTRL P  &mt LALT I  &mt LGUI A  &mt LSHFT E    &kp SEMI                                     &kp K    &mt RSHFT L  &mt RGUI T  &mt RALT N  &mt RCTRL C  &none
 &none  &kp APOS     &kp MINUS   &kp COMMA   &kp DOT        &kp FSLH     &kp C_MUTE    &kp C_PLAY_PAUSE  &kp J    &kp M        &kp G       &kp B       &kp V        &none
-                    &none       &none       &kp BACKSPACE  &lt 2 SPACE  &kp H         &kp R             &lt 1 S  &kp E        &none       &none
+                    &none       &none       &kp BACKSPACE  &lt 2 SPACE  &kp W         &kp S             &lt 1 H  &kp R        &none       &none
             >;
 
             sensor-bindings =
