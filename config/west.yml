@@ -4,16 +4,13 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main        # can be swapped to the exact branch/tag urob uses
+      revision: main
       import: app/west.yml
-
-    - name: zmk-helpers
+    - name: zmk-auto-layer
       remote: urob
-      revision: main        # pulls urob/zmk-helpers
-
+      revision: main
   self:
     path: config
