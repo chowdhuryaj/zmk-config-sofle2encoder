@@ -226,11 +226,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none      &none  &none  &none  &none     &none                                            &none      &none          &none      &none    &none     &none
-&gresc     &kp Q  &kp W  &kp L  &kp P     &kp B                                            &kp J      &kp Y          &kp O      &kp U    &kp RET   &kp BSPC
-&sk LCTRL  &kp A  &kp S  &kp R  &kp F     &kp G                                            &kp M      &kp F          &kp E      &kp I    &kp H     &sk RCTRL
-&sk LALT   &kp Z  &kp X  &kp C  &kp D     &kp V        &kp C_MUTE        &kp C_PLAY_PAUSE  &kp K      &kp N          &kp COMMA  &kp DOT  &kp FSLH  &sk RALT
-                  &none  &none  &sk LGUI  &lt 2 SPACE  &sk LEFT_SHIFT    &sk RSHFT         &lt 1 TAB  &sk RIGHT_GUI  &none      &none
+&none     &none  &none  &none  &none      &none                                        &none        &none      &none      &none    &none     &none
+&gresc    &kp Q  &kp W  &kp F  &kp P      &kp B                                        &kp J        &kp L      &kp U      &kp Y    &kp RET   &kp BSPC
+&kp TAB   &kp A  &kp R  &kp S  &kp T      &kp G                                        &kp M        &kp N      &kp E      &kp I    &kp O     &sk RCTRL
+&sk LALT  &kp Z  &kp X  &kp C  &kp D      &kp V        &kp C_MUTE    &kp C_PLAY_PAUSE  &kp K        &kp N      &kp COMMA  &kp DOT  &kp FSLH  &sk RALT
+                 &none  &none  &sk LSHFT  &lt 2 SPACE  &sk LGUI      &sk RGUI          &lt 1 SPACE  &sk RSHFT  &none      &none
             >;
 
             sensor-bindings =
