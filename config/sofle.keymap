@@ -197,11 +197,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none           &none        &none       &none         &none          &none                                            &none    &none        &none       &none       &none        &none
-&sk LEFT_SHIFT  &kp Z        &kp Y       &kp O         &kp U          &kp EQUAL                                        &kp Q    &kp L        &kp D       &kp P       &kp X        &sk RSHFT
-&kp W           &mt LCTRL C  &mt LALT I  &mt LGUI A    &mt LSHFT S    &kp SEMI                                         &kp K    &mt RSHFT H  &mt RGUI T  &mt RALT N  &mt RCTRL S  &kp F
-&kp LCTRL       &kp APOS     &kp MINUS   &kp COMMA     &kp DOT        &kp FSLH         &kp C_MUTE    &kp C_PLAY_PAUSE  &kp J    &kp M        &kp G       &kp B       &kp V        &none
-                             &kp LGUI    &kp LEFT_ALT  &kp BACKSPACE  &mt LSHFT SPACE  &mo 2         &lt 1 SPACE       &lt 1 R  &kp ENTER    &tog 1      &tog 2
+&none           &none        &none       &none         &none          &none                                        &none    &none        &none       &none       &none        &none
+&sk LEFT_SHIFT  &kp Z        &kp Y       &kp O         &kp U          &kp EQUAL                                    &kp Q    &kp L        &kp D       &kp P       &kp X        &sk RSHFT
+&kp W           &mt LCTRL C  &mt LALT I  &mt LGUI A    &mt LSHFT S    &kp SEMI                                     &kp K    &mt RSHFT H  &mt RGUI T  &mt RALT N  &mt RCTRL S  &kp F
+&kp LCTRL       &kp APOS     &kp MINUS   &kp COMMA     &kp DOT        &kp FSLH     &kp C_MUTE    &kp C_PLAY_PAUSE  &kp J    &kp M        &kp G       &kp B       &kp V        &none
+                             &kp LGUI    &kp LEFT_ALT  &kp BACKSPACE  &lt 2 SPACE  &none         &none             &lt 1 R  &kp ENTER    &tog 1      &tog 2
             >;
 
             sensor-bindings =
