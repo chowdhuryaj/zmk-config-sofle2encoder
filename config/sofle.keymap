@@ -236,11 +236,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&sk LALT   &kp B      &kp G   &kp L   &kp K       &kp Q                                            &kp P                 &kp G        &kp O              &kp U                 &kp P          &kp LS(DQT)
-&sk LCTRL  &kp N      &kp S   &kp H   &kp T       &kp M                                            &kp Y                 &kp C        &kp A              &kp E                 &kp I          &kp SQT
-&sk LGUI   &sk X      &sk V   &sk J   &sk D       &sk Z                                            &kp N                 &kp M        &kp COMMA          &kp DOT               &kp FSLH       &kp LS(COLON)
-&sk LSHFT  &kp LS(Z)  &kp A   &kp C   &kp E       &sk R            &kp C_MUTE    &kp C_PLAY_PAUSE  &kp E                 &kp P        &kp Q              &kp LS(EXCL)          &kp LS(QMARK)  &kp SEMI
-                      &tog 1  &tog 2  &kp DELETE  &mt LSHFT SPACE  &lt 2 RET     &lt 1 ENTER       &mt LEFT_SHIFT SPACE  &key_repeat  &sk LS(LA(LCTRL))  &sk LS(LA(LC(RGUI)))
+&sk LALT   &kp Q    &kp W   &kp E     &kp R      &kp T                                            &kp Y                 &kp U        &kp I              &kp I                 &kp O          &kp P
+&sk LCTRL  &kp A    &kp S   &kp D     &kp F      &kp G                                            &kp H                 &kp J        &kp K              &kp L                 &kp SEMI       &kp SQT
+&sk LGUI   &kp Z    &kp X   &kp C     &kp V      &kp B                                            &kp N                 &kp M        &kp COMMA          &kp DOT               &kp FSLH       &kp LS(COLON)
+&sk LSHFT  &kp ESC  &kp UP  &kp LEFT  &kp RIGHT  &kp DOWN         &kp C_MUTE    &kp C_PLAY_PAUSE  &kp MINUS             &kp EQUAL    &kp GRAVE          &kp LS(EXCL)          &kp LS(QMARK)  &kp LS(DQT)
+                    &tog 1  &tog 2    &kp BSPC   &mt LSHFT SPACE  &lt 2 RET     &lt 1 ENTER       &mt LEFT_SHIFT SPACE  &key_repeat  &sk LS(LA(LCTRL))  &sk LS(LA(LC(RGUI)))
             >;
 
             sensor-bindings =
