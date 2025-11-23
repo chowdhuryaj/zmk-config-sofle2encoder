@@ -196,6 +196,26 @@
             bindings = <&kp TAB>;
             key-positions = <32 33>;
         };
+
+        SK_LSft {
+            bindings = <&sk LSHFT>;
+            key-positions = <39 40>;
+        };
+
+        SK_RSft {
+            bindings = <&sk RSHFT>;
+            key-positions = <46 45>;
+        };
+
+        SK_LGui {
+            bindings = <&sk LGUI>;
+            key-positions = <39 38>;
+        };
+
+        SK_RGui {
+            bindings = <&sk RGUI>;
+            key-positions = <46 47>;
+        };
     };
 
     /*
