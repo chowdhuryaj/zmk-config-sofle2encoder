@@ -303,11 +303,11 @@
 
         Azeron_1 {
             bindings = <
-&trans  &kp Q  &kp M      &kp Z     &kp X               &tog 4                                  &trans  &trans  &trans  &trans  &trans  &none
-&trans  &kp N  &kp S      &kp T     &kp H               &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp C   &kp I  &kp A      &kp R     &kp E               &sl 5                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp Y  &kp O      &kp U     &kp F               &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-               &sk LCTRL  &sk LALT  &mt LGUI BACKSPACE  &mt LSHFT SPACE  &lt 6 ENTER    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &sk LGUI  &sk LCTRL  &sk LALT  &tog 4                                  &trans  &trans  &trans  &trans  &trans  &none
+&trans  &kp I   &kp S     &kp H      &kp T     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp M   &kp N   &kp A     &kp R      &kp E     &kp D                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &sl 5   &kp Y     &kp O      &kp U     &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &kp C     &kp W      &kp L     &mt LSHFT SPACE  &lt 6 ENTER    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
