@@ -303,11 +303,11 @@
 
         Azeron_1 {
             bindings = <
-&trans  &trans  &sk LGUI  &sk LCTRL  &sk LALT  &tog 4                              &trans  &trans  &trans  &trans  &trans  &none
-&trans  &kp I   &kp S     &kp H      &kp M     &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&kp C   &kp N   &kp A     &kp R      &kp E     &kp D                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp G   &kp Y     &kp O      &kp U     &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &kp W     &kp L      &sl 5     &mt LSHFT SPACE  &lt 6 T    &trans  &trans  &trans  &trans  &trans
+&none  &none  &sk LGUI  &sk LCTRL  &sk LALT  &tog 4                             &none  &none  &none  &none  &none  &none
+&none  &kp I  &kp S     &kp H      &kp M     &none                              &none  &none  &none  &none  &none  &none
+&kp C  &kp N  &kp A     &kp R      &kp E     &kp D                              &none  &none  &none  &none  &none  &none
+&none  &kp G  &kp Y     &kp O      &kp U     &none            &none      &none  &none  &none  &none  &none  &none  &none
+              &kp W     &kp L      &sl 5     &mt LSHFT SPACE  &lt 6 T    &none  &none  &none  &none  &none
             >;
         };
 
@@ -317,7 +317,7 @@
 &trans   &kp B                              &kp F                                &kp P                  &kp Q               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &kp DEL  &kp Z                              &kp X                                &kp J                  &kp K               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp LS(RPAR)           &kp V               &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                            &kp ESC                              &kp TAB                &kp BACKSPACE       &kp I   &trans    &trans  &trans  &trans  &trans  &trans
+                                            &kp ESC                              &kp TAB                &kp BACKSPACE       &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
