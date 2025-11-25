@@ -303,21 +303,21 @@
 
         Azeron_1 {
             bindings = <
-&trans  &trans  &sk LGUI  &sk LCTRL  &sk LALT  &tog 4                                  &trans  &trans  &trans  &trans  &trans  &none
-&trans  &kp I   &kp S     &kp H      &kp T     &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp M   &kp N   &kp A     &kp R      &kp E     &kp D                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &sl 5   &kp Y     &kp O      &kp U     &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &kp C     &kp W      &kp L     &mt LSHFT SPACE  &lt 6 ENTER    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &sk LGUI  &sk LCTRL  &sk LALT  &tog 4                              &trans  &trans  &trans  &trans  &trans  &none
+&trans  &kp I   &kp S     &kp H      &kp F     &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&sl 5   &kp N   &kp A     &kp R      &kp E     &kp D                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp G   &kp Y     &kp O      &kp U     &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &kp C     &kp W      &kp L     &mt LSHFT SPACE  &lt 6 T    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         Azeron_2 {
             bindings = <
-&trans  &mt SLASH COMMA                    &mt MINUS PERIOD                     &mt EQUAL EXCLAMATION  &mt GRAVE QUESTION  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp L                              &kp W                                &kp J                  &kp K               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp P   &kp Z                              &kp X                                &kp D                  &kp V               &kp B                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp LS(RPAR)           &kp G               &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                           &trans                               &trans                 &trans              &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans   &mt SLASH COMMA                    &mt MINUS PERIOD                     &mt EQUAL EXCLAMATION  &mt GRAVE QUESTION  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp B                              &kp F                                &kp K                  &kp Q               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp DEL  &kp Z                              &kp X                                &kp J                  &kp K               &kp B                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp LS(RPAR)           &kp V               &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans                               &trans                 &trans              &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
