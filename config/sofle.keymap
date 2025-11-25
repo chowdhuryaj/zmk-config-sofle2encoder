@@ -304,7 +304,7 @@
         Azeron_1 {
             bindings = <
 &trans  &trans  &sk LGUI  &sk LCTRL  &sk LALT  &tog 4                              &trans  &trans  &trans  &trans  &trans  &none
-&trans  &kp I   &kp S     &kp H      &kp M     &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp S     &kp H      &kp M     &trans                              &trans  &trans  &trans  &trans  &trans  &trans
 &sl 5   &kp N   &kp A     &kp R      &kp E     &kp D                               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp G   &kp Y     &kp O      &kp U     &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &kp C     &kp W      &kp L     &mt LSHFT SPACE  &lt 6 T    &trans  &trans  &trans  &trans  &trans
@@ -313,11 +313,11 @@
 
         Azeron_2 {
             bindings = <
-&trans   &mt SLASH COMMA                    &mt MINUS PERIOD                     &mt EQUAL EXCLAMATION  &mt GRAVE QUESTION  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &kp B                              &kp F                                &kp P                  &kp Q               &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&kp DEL  &kp Z                              &kp X                                &kp J                  &kp K               &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp LS(RPAR)           &kp V               &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                            &kp ESC                              &kp TAB                &kp BACKSPACE       &kp RET  &trans    &trans  &trans  &trans  &trans  &trans
+&trans   &mt SLASH COMMA                    &mt MINUS PERIOD                     &mt EQUAL EXCLAMATION  &mt GRAVE QUESTION  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp B                              &kp F                                &kp P                  &kp Q               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp DEL  &kp Z                              &kp X                                &kp J                  &kp K               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp LS(RPAR)           &kp V               &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                            &kp ESC                              &kp TAB                &kp BACKSPACE       &kp I   &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
