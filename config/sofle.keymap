@@ -294,7 +294,27 @@
 &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T                           &kp Y         &kp U         &kp I         &kp O           &kp P      &tog 0
 &kp ESC         &kp A         &kp S         &kp D         &kp F         &kp G                           &kp H         &kp J         &kp K         &kp L           &kp SEMI   &kp SQT
 &kp LSHFT       &kp Z         &kp C         &kp X         &kp V         &kp B         &trans    &trans  &kp N         &kp M         &kp COMMA     &kp DOT         &kp FSLH   &tog 3
-                              &trans        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans
+                              &tog 4        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans
+            >;
+        };
+
+        Azeron_1 {
+            bindings = <
+&trans  &kp F  &kp L   &kp H   &kp U   &tog 4                    &trans  &trans  &trans  &trans  &trans  &none
+&trans  &kp R  &kp S   &kp N   &kp I   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp P   &kp A  &kp O   &kp T   &kp E   &sl 5                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp D  &kp C   &kp M   &kp P   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+               &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Azeron_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
