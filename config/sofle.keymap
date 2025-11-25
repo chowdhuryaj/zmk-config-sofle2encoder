@@ -27,7 +27,10 @@
     tapping-term-ms = <200>;
 };
 
-&mmv { time-to-max-speed-ms = <450>; };
+&sl {
+    ignore-modifiers;
+    release-after-ms = <2000>;
+};
 
 / {
     behaviors {
@@ -300,10 +303,10 @@
 
         Azeron_1 {
             bindings = <
-&trans  &kp F  &kp L      &kp H     &kp U               &tog 4                                  &trans  &trans  &trans  &trans  &trans  &none
-&trans  &kp R  &kp S      &kp N     &kp I               &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp G   &kp A  &kp O      &kp T     &kp E               &sl 5                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp D  &kp C      &kp M     &kp P               &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F  &kp L      &kp M     &kp U               &tog 4                                  &trans  &trans  &trans  &trans  &trans  &none
+&trans  &kp R  &kp Y      &kp H     &kp I               &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp S   &kp A  &kp O      &kp T     &kp E               &sl 5                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp D  &kp U      &kp N     &kp P               &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
                &sk LCTRL  &sk LALT  &mt LGUI BACKSPACE  &mt LSHFT SPACE  &lt 6 ENTER    &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -311,9 +314,9 @@
         Azeron_2 {
             bindings = <
 &trans  &mt SLASH COMMA                    &mt MINUS PERIOD                     &mt EQUAL EXCLAMATION  &mt GRAVE QUESTION  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp B                              &kp V                                &kp W                  &kp Y               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp Z   &kp Q                              &kp X                                &kp J                  &kp K               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp LS(RPAR)           &kp MINUS           &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp B                              &kp V                                &kp J                  &kp K               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp W   &kp Z                              &kp X                                &kp C                  &kp V               &kp B                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp LS(RPAR)           &trans              &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                            &trans                               &trans                 &trans              &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
