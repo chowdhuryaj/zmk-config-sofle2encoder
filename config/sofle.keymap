@@ -310,11 +310,11 @@
 
         Azeron_2 {
             bindings = <
-&trans  &kp COMMA  &kp DOT       &kp LS(EXCL)  &kp LS(QMARK)  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp B      &kp V         &kp W         &kp Y          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp Z   &kp Q      &kp X         &kp J         &kp K          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp FSLH   &kp LS(LPAR)  &kp LS(RPAR)  &kp MINUS      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                   &trans        &trans        &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &mt SLASH COMMA                    &mt MINUS PERIOD                     &mt EQUAL EXCLAMATION  &mt GRAVE QUESTION  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp B                              &kp V                                &kp W                  &kp Y               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp Z   &kp Q                              &kp X                                &kp J                  &kp K               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt LEFT_BRACKET LEFT_PARENTHESIS  &mt RIGHT_BRACKET RIGHT_PARENTHESIS  &kp LS(RPAR)           &kp MINUS           &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                           &trans                               &trans                 &trans              &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
