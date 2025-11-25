@@ -300,15 +300,25 @@
 
         Azeron_1 {
             bindings = <
-&trans  &kp F  &kp L   &kp H   &kp U   &tog 4                    &trans  &trans  &trans  &trans  &trans  &none
-&trans  &kp R  &kp S   &kp N   &kp I   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp P   &kp A  &kp O   &kp T   &kp E   &sl 5                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp D  &kp C   &kp M   &kp P   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-               &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &kp F  &kp L      &kp H     &kp U               &tog 4                                  &trans  &trans  &trans  &trans  &trans  &none
+&trans  &kp R  &kp S      &kp N     &kp I               &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp G   &kp A  &kp O      &kp T     &kp E               &sl 5                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp D  &kp C      &kp M     &kp P               &trans           &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+               &sk LCTRL  &sk LALT  &mt LGUI BACKSPACE  &mt LSHFT SPACE  &lt 6 ENTER    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         Azeron_2 {
+            bindings = <
+&trans  &kp COMMA  &kp DOT       &kp LS(EXCL)  &kp LS(QMARK)  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp B      &kp V         &kp W         &kp Y          &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&kp Z   &kp Q      &kp X         &kp J         &kp K          &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp FSLH   &kp LS(LPAR)  &kp LS(RPAR)  &kp MINUS      &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                   &kp MINUS     &kp LS(LPAR)  &kp LS(RPAR)   &kp LS(RPAR)  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Azeron_NumNav {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
