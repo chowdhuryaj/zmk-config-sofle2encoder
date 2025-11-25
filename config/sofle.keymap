@@ -305,9 +305,9 @@
             bindings = <
 &trans  &trans  &sk LGUI  &sk LCTRL  &sk LALT  &tog 4                              &trans  &trans  &trans  &trans  &trans  &none
 &trans  &kp I   &kp S     &kp H      &kp M     &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&sl 5   &kp N   &kp A     &kp R      &kp E     &kp D                               &trans  &trans  &trans  &trans  &trans  &trans
+&kp C   &kp N   &kp A     &kp R      &kp E     &kp D                               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp G   &kp Y     &kp O      &kp U     &trans           &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &kp C     &kp W      &kp L     &mt LSHFT SPACE  &lt 6 T    &trans  &trans  &trans  &trans  &trans
+                &kp M     &kp L      &sl 5     &mt LSHFT SPACE  &lt 6 T    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
