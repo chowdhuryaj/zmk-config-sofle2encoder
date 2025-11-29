@@ -124,16 +124,10 @@
             bindings = <&kp TAB>;
         };
 
-        numtoggle {
-            bindings = <&tog 1>;
-            key-positions = <15 14 16>;
-            layers = <0 1>;
-        };
-
         navtoggle {
-            bindings = <&tog 2>;
+            bindings = <&tog 1>;
             key-positions = <3 14 16>;
-            layers = <2 0>;
+            layers = <1 0>;
         };
 
         enter {
@@ -180,6 +174,16 @@
             bindings = <&kp SPACE>;
             key-positions = <41 16>;
         };
+
+        q {
+            bindings = <&kp Q>;
+            key-positions = <41 13>;
+        };
+
+        z {
+            bindings = <&kt Z>;
+            key-positions = <41 14>;
+        };
     };
 
     /*
@@ -213,11 +217,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp W  &kp B  &kp F  &kp L  &kp K        &kp Q                                    &kp P        &kp Y        &kp O     &kp U     &kp DOT    &kp LS(COLON)
-&kp A  &kp N  &kp S  &kp H  &kp T        &kp M                                    &kp G        &kp C        &kp A     &kp E     &kp I      &kp LS(EXCL)
-&kp O  &kp X  &kp V  &kp J  &kp D        &kp Z                                    &kp SQT      &kp W        &kp FSLH  &kp SEMI  &kp COMMA  &kp LS(QMARK)
-&kp P  &kp G  &kp C  &kp E  &mt LSHFT I  &lt 2 R  &kp C_MUTE    &kp C_PLAY_PAUSE  &lt 1 SPACE  &key_repeat  &sk LGUI  &sk LALT  &sk LSHFT  &sk LCTRL
-              &none  &none  &none        &none    &none         &none             &none        &none        &none     &none
+&kp V  &kp B  &kp F  &kp J  &kp K        &kp D                                    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT          &kp LS(LPAR)   &kp LS(RPAR)
+&kp W  &kp C  &kp I  &kp A  &kp E        &kp G                                    &kp N7     &kp N8     &kp N9    &kp N0            &kp LS(COLON)  &kp LS(DQT)
+&kp P  &kp N  &kp S  &kp H  &kp T        &kp M                                    &kp N4     &kp N5     &kp N6    &kp SEMI          &kp SQT        &kp LS(QMARK)
+&kp X  &kp Y  &kp O  &kp U  &mt LSHFT L  &lt 1 R  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N1     &kp N2     &kp N3    &kp COMMA         &kp DOT        &kp FSLH
+              &none  &none  &none        &none    &none         &kp LGUI          &kp LSHFT  &kp LCTRL  &kp LALT  &kp LS(LC(LALT))
             >;
 
             sensor-bindings =
@@ -225,24 +229,13 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-        num {
-            display-name = "Number";
-            bindings = <
-&kp F1        &kp F2        &kp F3  &kp F4  &kp F5  &kp F6                      &kp F7     &kp F8        &kp F9         &kp F10        &kp F11       &kp F12
-&kp MINUS     &kp EQUAL     &kp N7  &kp N8  &kp N9  &kp ESC                     &kp SPACE  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LBKT      &kp RBKT
-&kp FSLH      &kp LS(STAR)  &kp N4  &kp N5  &kp N6  &kp BSPC                    &kp LALT   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(LBRC)  &kp LS(RBRC)
-&kp LS(LPAR)  &kp LS(RPAR)  &kp N1  &kp N2  &kp N3  &kp N0    &trans    &trans  &kp RGUI   &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp BSLH      &tog 1
-                            &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans        &trans         &trans
-            >;
-        };
-
         nav {
             display-name = "Nav";
             bindings = <
-&trans  &trans             &trans     &trans     &trans     &trans                         &trans    &trans          &trans          &trans           &trans           &tog 3
+&trans  &trans             &trans     &trans     &trans     &trans                         &trans    &trans          &trans          &trans           &trans           &tog 2
 &trans  &kp LA(BACKSPACE)  &kp HOME   &kp UP     &kp END    &kp LG(T)                      &trans    &mkp MB2        &mmv MOVE_UP    &mkp MB3         &trans           &trans
 &trans  &kp LG(A)          &kp LEFT   &kp DOWN   &kp RIGHT  &kp LG(W)                      &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &trans
-&trans  &kp LG(Z)          &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(TAB)  &trans    &trans  &trans    &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &tog 2
+&trans  &kp LG(Z)          &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(TAB)  &trans    &trans  &trans    &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &tog 1
                            &trans     &trans     &trans     &trans       &trans    &trans  &mkp MB1  &trans          &trans          &trans
             >;
         };
@@ -253,7 +246,7 @@
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &studio_unlock  &soft_off  &sys_reset
 &trans          &trans        &trans        &trans        &trans        &trans                          &trans        &trans        &trans        &trans          &trans     &trans
 &trans          &trans        &trans        &trans        &trans        &trans                          &trans        &trans        &trans        &trans          &trans     &trans
-&trans          &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans          &trans     &tog 3
+&trans          &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans          &trans     &tog 2
                               &trans        &trans        &trans        &trans        &trans    &trans  &trans        &trans        &trans        &trans
             >;
         };
