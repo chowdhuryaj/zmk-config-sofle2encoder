@@ -66,31 +66,6 @@
             bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
             label = "BRACK";
         };
-
-        shifted: macro_shifted_kp {
-            #binding-cells = <1>;
-            label = "MACRO_SHIFTED_KP";
-            compatible = "zmk,behavior-macro-one-param";
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT &macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LSHFT>;
-        };
-
-        as: autoshift {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            label = "AUTOSHIFT_KP";
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &macro_param_1to2 &none MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &macro_param_1to2 &none MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
-        };
     };
 
     combos {
@@ -217,9 +192,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp V  &kp B  &kp F  &kp J  &kp K        &kp D                                    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT          &kp LS(LPAR)   &kp LS(RPAR)
-&kp W  &kp C  &kp I  &kp A  &kp E        &kp G                                    &kp N7     &kp N8     &kp N9    &kp N0            &kp LS(COLON)  &kp LS(DQT)
-&kp P  &kp N  &kp S  &kp H  &kp T        &kp M                                    &kp N4     &kp N5     &kp N6    &kp SEMI          &kp SQT        &kp LS(QMARK)
+&kp V  &kp B  &kp F  &kp J  &kp K        &kp G                                    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT          &kp LS(LPAR)   &kp LS(RPAR)
+&kp W  &kp N  &kp I  &kp A  &kp E        &kp D                                    &kp N7     &kp N8     &kp N9    &kp N0            &kp LS(COLON)  &kp LS(DQT)
+&kp P  &kp C  &kp S  &kp H  &kp T        &kp M                                    &kp N4     &kp N5     &kp N6    &kp SEMI          &kp SQT        &kp LS(QMARK)
 &kp X  &kp Y  &kp O  &kp U  &mt LSHFT L  &lt 1 R  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N1     &kp N2     &kp N3    &kp COMMA         &kp DOT        &kp FSLH
               &none  &none  &none        &none    &none         &kp LGUI          &kp LSHFT  &kp LCTRL  &kp LALT  &kp LS(LC(LALT))
             >;
