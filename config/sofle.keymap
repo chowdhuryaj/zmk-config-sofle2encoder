@@ -5,20 +5,14 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-/* Pointer tuning from your file */
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 2000
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30
-
-/* Encoder tuning from your file */
 
 &sensors { triggers-per-rotation = <30>; };
 
 &left_encoder { steps = <60>; };
 
 &right_encoder { steps = <60>; };
-
-/* Your original global &mt tweaks */
 
 &mt {
     flavor = "balanced";
@@ -42,15 +36,7 @@
         };
     };
 
-    /*
-     * Your original conditional_layers node
-     */
-
-    conditional_layers { compatible = "zmk,conditional-layers"; };
-
-    /*
-     * Your original macros block, unchanged
-     */
+conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
         paren: paren {
@@ -70,20 +56,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        /*
-         * === CORE NAV/EDIT COMBOS YOU ALREADY HAD ===
-         *
-         * These came from your original keymap:
-         * - enter          <27 28>
-         * - esc            <25 26>
-         * - tab            <26 27>
-         * - del            <26 27 28>
-         * - backspace      <25 26 27>
-         * - fhv macro      <26 27 28 25 54>
-         *
-         * I'm leaving them exactly as-is so nothing breaks.
-         */
 
         combo_esc {
             timeout-ms = <40>;
@@ -192,27 +164,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-
-        /*
-         * LAYER 0: default_layer
-         *
-         * ONLY CHANGE in this layer:
-         *   Home row now uses &hml / &hmr to get mirrored mods.
-         *   Everything else is exactly what you had.
-         *
-         * Mapping:
-         *   A = tap 'a', hold Left GUI
-         *   S = tap 's', hold Left Alt
-         *   D = tap 'd', hold Left Ctrl
-         *   F = tap 'f', hold Left Shift
-         *
-         *   J = tap 'j', hold Right Shift
-         *   K = tap 'k', hold Right Ctrl
-         *   L = tap 'l', hold Right Alt
-         *   ; = tap ';', hold Right GUI
-         *
-         * G and H remain normal so there's a "break" in the middle.
-         */
 
         default_layer {
             display-name = "Base";
