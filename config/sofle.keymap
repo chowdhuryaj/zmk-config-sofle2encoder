@@ -40,40 +40,6 @@
             #binding-cells = <0>;
             continue-list = <>;
         };
-
-        as_ht: autoshift_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AUTOSHIFT_HOLD_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            bindings = <&shifted>, <&kp>;
-
-            flavor = "tap-preferred";
-        };
-
-        magic_lt1: magic_lt1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MAGIC_LT1";
-            #binding-cells = <0>;
-            bindings = <&key_repeat>, <&caps_word>;
-        };
-
-        magic_rt1: magic_rt1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MAGIC_RT1";
-            #binding-cells = <0>;
-            bindings = <&key_repeat>, <&sk LEFT_SHIFT>;
-        };
-
-        stickymod_layer: stickymod_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "STICKYMOD_LAYER";
-            bindings = <&mo>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
     };
 
     /*
@@ -120,10 +86,10 @@
             label = "AUTOSHIFT_KP";
             bindings =
                 <&macro_press>,
-                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &macro_param_1to2 &none MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &macro_param_1to2 &none MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
         };
     };
 
