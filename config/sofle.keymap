@@ -237,11 +237,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none  &kp B  &kp F  &kp L          &kp K            &kp Q                                    &kp P    &kp Y  &kp O     &kp U     &kp DOT    &kp LS(COLON)
-&none  &kp N  &kp S  &kp H          &kp T            &kp M                                    &kp G    &kp C  &kp A     &kp E     &kp I      &kp LS(EXCL)
-&none  &kp X  &kp V  &kp J          &kp D            &kp Z                                    &kp SQT  &kp W  &kp FSLH  &kp SEMI  &kp COMMA  &kp LS(QMARK)
-&none  &kp X  &kp V  &kp BACKSPACE  &mt LSHFT SPACE  &lt 2 R  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp SQT  &kp W  &kp FSLH  &kp SEMI  &kp COMMA  &kp LS(QMARK)
-              &none  &none          &none            &none    &none         &none             &none    &none  &none     &none
+&kp Y  &kp B  &kp F  &kp L          &kp K            &kp Q                                    &kp P    &kp Y           &kp O     &kp U     &kp DOT      &kp LS(COLON)
+&kp A  &kp N  &kp S  &kp H          &kp T            &kp M                                    &kp G    &kp C           &kp I     &kp A     &key_repeat  &kp LS(EXCL)
+&kp U  &kp X  &kp V  &kp J          &kp D            &kp Z                                    &kp SQT  &kp W           &kp FSLH  &kp SEMI  &kp COMMA    &kp LS(QMARK)
+&kp P  &kp G  &kp C  &kp BACKSPACE  &mt LSHFT SPACE  &lt 2 R  &kp C_MUTE    &kp C_PLAY_PAUSE  &lt 1 E  &mt LCMD SPACE  &kp FSLH  &kp SEMI  &kp COMMA    &kp LS(QMARK)
+              &none  &none          &none            &none    &none         &none             &none    &none           &none     &none
             >;
 
             sensor-bindings =
