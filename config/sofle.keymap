@@ -36,7 +36,7 @@
         };
     };
 
-conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
         paren: paren {
@@ -168,10 +168,10 @@ conditional_layers { compatible = "zmk,conditional-layers"; };
         default_layer {
             display-name = "Base";
             bindings = <
-&kp V  &kp B  &kp F  &kp J  &kp K        &kp G                                    &kp MINUS        &kp EQUAL            &paren    &brack            &mt LS(F2) F1  &mt LS(RPAR) F2
-&kp W  &kp N  &kp I  &kp A  &kp E        &kp D                                    &kp N7           &kp N8               &kp N9    &kp N0            &mt LS(F3) F3  &kp LS(DQT)
-&kp P  &kp C  &kp S  &kp H  &kp T        &kp M                                    &kp N4           &kp N5               &kp N6    &kp SEMI          &kp SQT        &kp LS(QMARK)
-&kp X  &kp Y  &kp O  &kp U  &mt LSHFT L  &lt 1 R  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N1           &kp N2               &kp N3    &kp COMMA         &kp DOT        &kp FSLH
+&kp W  &kp C  &kp I  &kp A  &kp E        &kp G                                    &kp MINUS        &kp EQUAL            &paren    &brack            &mt LS(F2) F1  &mt LS(RPAR) F2
+&kp M  &kp N  &kp S  &kp H  &kp T        &kp D                                    &kp N7           &kp N8               &kp N9    &kp N0            &mt LS(F3) F3  &kp LS(DQT)
+&kp P  &kp F  &kp B  &kp Y  &kp O        &kp U                                    &kp N4           &kp N5               &kp N6    &kp SEMI          &kp SQT        &kp LS(QMARK)
+&kp X  &kp J  &kp K  &kp V  &mt LSHFT L  &lt 1 R  &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N1           &kp N2               &kp N3    &kp COMMA         &kp DOT        &kp FSLH
               &none  &none  &none        &none    &none         &mt LGUI ENTER    &mt LSHFT SPACE  &mt LCTRL BACKSPACE  &kp LALT  &kp LS(LC(LALT))
             >;
 
