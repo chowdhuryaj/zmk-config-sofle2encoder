@@ -83,7 +83,7 @@
         };
 
         close_win {
-            bindings = <&kp LG(W)>;
+            bindings = <&kp LA(F4)>;
             key-positions = <0 1>;
         };
 
@@ -156,6 +156,16 @@
             bindings = <&kp SQT>;
             key-positions = <25 41>;
         };
+
+        numbol {
+            bindings = <&tog 2>;
+            key-positions = <5 4 17 16>;
+        };
+
+        sys {
+            bindings = <&tog 3>;
+            key-positions = <17 16 29 28>;
+        };
     };
 
     /*
@@ -171,7 +181,7 @@
 &kp LALT   &kp Z  &kp Y  &kp O          &kp U            &kp F                                           &kp N1           &kp N2       &kp N3     &kp N4    &kp N5    &kp N6
 &kp LGUI   &kp C  &kp I  &kp E          &kp A            &kp W                                           &kp Q            &kp X        &kp COMMA  &kp DOT   &kp FSLH  &kp N7
 &kp EQUAL  &kp N  &kp S  &kp T          &kp H            &kp D                                           &kp K            &kp L        &kp P      &kp SEMI  &kp SQT   &kp N8
-&kp MINUS  &kp N  &kp S  &kp BACKSPACE  &mt LSHFT SPACE  &mt LCTRL R  &none              &none           &kp J            &kp M        &kp G      &kp B     &kp V     &kp N9
+&kp MINUS  &mo 2  &mo 1  &kp BACKSPACE  &mt LSHFT SPACE  &mt LCTRL R  &none              &none           &kp J            &kp M        &kp G      &kp B     &kp V     &kp N9
                   &none  &none          &kp BSPC         &mt LCTRL R  &mt LSHFT SPACE    &mt LGUI ENTER  &mt LSHFT SPACE  &key_repeat  &none      &kp N0
             >;
         };
@@ -180,9 +190,9 @@
             display-name = "nav";
             bindings = <
 &trans  &trans             &trans     &trans     &trans     &trans                         &trans    &trans          &trans          &trans           &trans           &none
-&trans  &kp LA(BACKSPACE)  &kp HOME   &kp UP     &kp END    &kp LG(T)                      &trans    &mkp MB2        &mmv MOVE_UP    &mkp MB3         &trans           &trans
-&trans  &kp LG(A)          &kp LEFT   &kp DOWN   &kp RIGHT  &kp LG(W)                      &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &trans
-&trans  &kp LG(Z)          &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(TAB)  &trans    &trans  &trans    &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &none
+&trans  &kp LC(BACKSPACE)  &kp HOME   &kp UP     &kp END    &kp LC(T)                      &trans    &mkp MB2        &mmv MOVE_UP    &mkp MB3         &trans           &trans
+&trans  &kp LC(A)          &kp LEFT   &kp DOWN   &kp RIGHT  &kp LC(W)                      &mkp MB4  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &trans
+&trans  &kp LC(Z)          &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(TAB)  &trans    &trans  &trans    &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_LEFT   &msc SCRL_RIGHT  &none
                            &trans     &trans     &trans     &trans       &trans    &trans  &mkp MB1  &trans          &trans          &trans
             >;
         };
