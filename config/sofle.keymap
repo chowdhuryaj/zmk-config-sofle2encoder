@@ -187,11 +187,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp LALT   &kp Z  &kp Y              &kp O          &kp U            &kp F                                           &kp N1           &kp N2       &kp N3     &kp N4    &kp N5    &kp N6
-&kp LGUI   &kp C  &kp I              &kp E          &kp A            &kp W                                           &kp Q            &kp X        &kp COMMA  &kp DOT   &kp FSLH  &kp N7
-&kp EQUAL  &kp N  &kp S              &kp T          &kp H            &kp D                                           &kp K            &kp L        &kp P      &kp SEMI  &kp SQT   &kp N8
-&kp MINUS  &mo 2  &kp LA(LC(GRAVE))  &kp BACKSPACE  &mt LSHFT SPACE  &mt LCTRL R  &none              &none           &kp J            &kp M        &kp G      &kp B     &kp V     &kp N9
-                  &none              &none          &kp BSPC         &mt LCTRL R  &mt LSHFT SPACE    &mt LGUI ENTER  &mt LSHFT SPACE  &key_repeat  &none      &kp N0
+&kp LALT   &kp Z  &kp Y              &kp O          &kp U            &kp F                                           &kp N1           &kp N2       &kp N3  &kp N4    &kp N5    &kp N6
+&kp LGUI   &kp C  &kp I              &kp E          &kp A            &kp W                                           &kp Q            &kp X        &cmqus  &kp DOT   &kp FSLH  &kp N7
+&kp EQUAL  &kp N  &kp S              &kp T          &kp H            &kp D                                           &kp K            &kp L        &kp P   &kp SEMI  &kp SQT   &kp N8
+&kp MINUS  &mo 2  &kp LA(LC(GRAVE))  &kp BACKSPACE  &mt LSHFT SPACE  &mt LCTRL R  &none              &none           &kp J            &kp M        &kp G   &kp B     &kp V     &kp N9
+                  &none              &none          &kp BSPC         &mt LCTRL R  &mt LSHFT SPACE    &mt LGUI ENTER  &mt LSHFT SPACE  &key_repeat  &none   &kp N0
             >;
 
             sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
