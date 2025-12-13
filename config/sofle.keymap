@@ -34,6 +34,15 @@
             #binding-cells = <0>;
             continue-list = <>;
         };
+
+        cmqus: cmqus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMQUS";
+            bindings = <&none>, <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
